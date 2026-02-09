@@ -68,20 +68,6 @@
 
       <!-- ==================== 섹션 0: 개요 ==================== -->
       <section id="overview" class="content-section active">
-        <div class="insight-box">
-          <p><strong>이 문서를 다 보고 나면, 여러분은:</strong></p>
-          <ul>
-            <li>바이브 코딩이 뭔지 자신있게 설명할 수 있어요</li>
-            <li>Claude Code, VS Code, Git을 직접 설치하고 사용할 수 있어요</li>
-            <li>AI와 대화해서 <strong>뉴스 요약 슬랙 봇</strong>을 처음부터 끝까지 만들 수 있어요</li>
-          </ul>
-        </div>
-
-        <div class="key-message">
-          <span class="key-icon">🎯</span>
-          <p class="key-text">코드를 짜는 시대에서, AI를 지휘하는 시대로 바뀌었어요.</p>
-        </div>
-
         <blockquote>
           "AI한테 시키면 뭔가 나오긴 해요. 근데 거기서 끝이에요."<br><br>
           기능 하나 추가하려니까 꼬이고, 에러 나면 뭐가 문제인지 모르겠고,<br>
@@ -94,7 +80,27 @@
         <p>그런데 갑자기 아까 되던 게 안 돼요. 에러가 줄줄 나와요. 어디를 고쳐야 하는지도 모르겠어요.</p>
         <p>결국 "처음부터 다시 하자" → 3번째 반복하면... 포기.</p>
         <p><strong>이건 AI가 무능해서가 아니에요. 시키는 방법을 몰라서예요.</strong></p>
-        <p>그런데 AI의 능력 자체는 놀라울 정도로 발전했어요. 문제는 그 능력을 끌어내는 방법이에요.</p>
+        <p>도구 탓이 아니에요. <strong>지휘자의 문제</strong>예요. AI의 능력은 이미 놀라울 정도로 발전했어요. 그렇다면 왜 여전히 실패할까요? 답은 간단해요 — 그 능력을 끌어내는 방법을 아직 모르기 때문이에요.</p>
+
+        <h2>세상이 바뀌고 있어요</h2>
+        <div class="ai-grid">
+          <div class="ai-card" style="padding:24px">
+            <span style="font-size:32px">🔥</span>
+            <span class="ai-name" style="font-size:16px;white-space:normal">마이크로 서비스의 폭발</span>
+            <span style="font-size:13px;color:var(--color-text-muted)">"이 기능 하나만 잘하면 돼" → AI로 빠르게 출시</span>
+          </div>
+          <div class="ai-card" style="padding:24px">
+            <span style="font-size:32px">💰</span>
+            <span class="ai-name" style="font-size:16px;white-space:normal">가격 경쟁의 시작</span>
+            <span style="font-size:13px;color:var(--color-text-muted)">개발팀 10명 → 1~2명. 인건비 절감 → 가격 파괴</span>
+          </div>
+          <div class="ai-card" style="padding:24px">
+            <span style="font-size:32px">🏃</span>
+            <span class="ai-name" style="font-size:16px;white-space:normal">소규모 팀의 강세</span>
+            <span style="font-size:13px;color:var(--color-text-muted)">대기업 의사결정 3개월, 소규모 팀은 3일</span>
+          </div>
+        </div>
+        <p>이건 먼 미래 얘기가 아니에요. <strong>지금 일어나고 있어요.</strong> 비개발자가 AI로 업무 자동화 툴을 만들어 팀에 배포하고, 1인 창업자가 AI로 SaaS를 만들어 월 수천만원 수익을 올리고 있어요.</p>
 
         <h2>AI 코딩의 발전 과정</h2>
         <table>
@@ -139,12 +145,18 @@
           </div>
         </div>
 
-        <div class="insight-box">
-          <p>그래서 바이브 코딩이 필요해요.</p>
+        <div class="key-message">
+          <span class="key-icon">🎯</span>
+          <p class="key-text">그래서 바이브 코딩이 필요해요. 코드를 짜는 시대에서, AI를 지휘하는 시대로. 이 특강이 그 방법을 알려드려요.</p>
         </div>
 
         <div class="insight-box">
-          <p><strong>핵심 인사이트:</strong> "우리 서비스는 7일 이내만 환불 가능한데, AI는 이걸 몰라요." — AI 시대의 경쟁력은 코딩 실력이 아니라 <strong>업무와 비즈니스에 대한 이해도</strong>예요. 여러분이 가진 도메인 지식이 곧 무기예요.</p>
+          <p><strong>이 문서를 다 보고 나면, 여러분은:</strong></p>
+          <ul>
+            <li>바이브 코딩이 뭔지 자신있게 설명할 수 있어요</li>
+            <li>Claude Code, VS Code, Git을 직접 설치하고 사용할 수 있어요</li>
+            <li>AI와 대화해서 <strong>IT 속보 슬랙 봇</strong>을 처음부터 끝까지 만들 수 있어요</li>
+          </ul>
         </div>
 
         <h2>오늘의 흐름</h2>
@@ -176,7 +188,7 @@
           <div class="flow-node">
             <span class="flow-emoji">📋</span>
             <span class="flow-label">정리</span>
-            <span class="flow-desc">다음 단계</span>
+            <span class="flow-desc">오늘의 핵심</span>
           </div>
         </div>
 
@@ -254,19 +266,21 @@
           <div class="comparison-card traditional">
             <h3>전통 방식</h3>
             <ul>
-              <li>언어 선택 → 문법 공부</li>
-              <li>프레임워크 학습</li>
-              <li>코드 작성 → 삽질...</li>
-              <li>6개월~1년</li>
+              <li>프로그래밍 언어 선택 (JavaScript? Python?)</li>
+              <li>문법 공부 (변수, 함수, 조건문...)</li>
+              <li>프레임워크 학습 (React? Vue?)</li>
+              <li>코드 작성 → 에러 → 구글 검색 → 삽질</li>
+              <li><strong>6개월~1년 후</strong>에 겨우 간단한 앱 하나</li>
             </ul>
           </div>
           <div class="comparison-card vibe">
             <h3>바이브 코딩</h3>
             <ul>
-              <li>AI에게 말하기</li>
-              <li>기획 대화 → 코드 생성</li>
-              <li>피드백 → 반복</li>
-              <li>대화할 줄 알면 시작</li>
+              <li>AI에게 말하기: "할 일 관리 앱 만들고 싶어"</li>
+              <li>AI가 물어봄: "어떤 기능이 필요해요?"</li>
+              <li>대화하며 기획 → AI가 코드 작성</li>
+              <li>피드백: "버튼이 너무 작아. 더 크게" → 수정</li>
+              <li><strong>대화할 줄 알면</strong> 바로 시작 가능</li>
             </ul>
           </div>
         </div>
@@ -423,7 +437,7 @@
           </div>
           <div class="growth-step" data-step="2">
             <div class="step-title">몇 번 하다 보면</div>
-            <div class="step-desc">"아, 지금 로그인 부분 고치고 있구나"</div>
+            <div class="step-desc">"아, 지금 로그인 부분 고치고 있구나" "여기서 에러 난 건 이것 때문이겠네"</div>
           </div>
           <div class="growth-step current" data-step="3">
             <div class="step-title">결국</div>
@@ -433,6 +447,10 @@
 
         <blockquote>
           자동차를 직접 만들 줄 몰라도 운전은 할 수 있어요.<br>
+          근데 운전하려면 적어도 이건 알아야 해요:<br><br>
+          <strong>엑셀이 뭐고 브레이크가 뭔지</strong> → 기본 개념<br>
+          <strong>신호등이 뭘 의미하는지</strong> → 에러/경고 읽기<br>
+          <strong>어디로 가고 싶은지</strong> → 만들 목표<br><br>
           AI가 차를 만들어주지만, <strong>운전은 여러분이 해요.</strong>
         </blockquote>
 
@@ -504,6 +522,39 @@
             <td>"이건 로그인 기능이구나" 판독 능력</td>
           </tr>
         </table>
+
+        <div class="insight-box">
+          <p><strong>여러분의 업무 지식이 곧 무기예요.</strong><br>
+          "우리 서비스는 7일 이내만 환불 가능한데, AI는 이걸 몰라요." — AI 시대의 경쟁력은 코딩 실력이 아니라 <strong>업무와 비즈니스에 대한 이해도</strong>예요. 프로그래밍 문법은 AI가 대신하지만, "이 기능이 우리 고객에게 왜 필요한지"는 여러분만 알아요.</p>
+        </div>
+
+        <h3>"알아서 해줘"의 함정</h3>
+        <div class="insight-box">
+          <p>많은 분이 이렇게 생각해요: "할 일 추가, 삭제, 완료 체크. 완료한 건 아래로. 스마트폰에서 돌아가게" — <strong>이 정도면 구체적인 거 아냐?</strong></p>
+          <p>아니에요. 이것도 "알아서 해줘"예요. 왜냐면 AI는 이런 걸 모르거든요:</p>
+          <ul>
+            <li>"할 일 추가" 버튼이 <strong>어디에</strong> 있어야 하는지</li>
+            <li>완료 체크하면 <strong>바로</strong> 내려가야 하는지, 애니메이션이 있어야 하는지</li>
+            <li>"오늘 할 일" 화면에서 뒤로 가기 누르면 <strong>어디로</strong> 가야 하는지</li>
+          </ul>
+          <p>기능 목록을 줘도, <strong>"사용자 경험"은 AI가 알아서 못 만들어요.</strong></p>
+        </div>
+
+        <h3>진짜 구체적 지시 = 한 입 크기로</h3>
+        <div class="growth-path">
+          <div class="growth-step" data-step="1">
+            <div class="step-title">1단계: 기획 문서 먼저</div>
+            <div class="step-desc">"이 앱이 뭔지, 누가 쓰는지, 핵심 기능이 뭔지" — AI한테 같이 정리하자고 해도 OK</div>
+          </div>
+          <div class="growth-step" data-step="2">
+            <div class="step-title">2단계: 기능 하나씩 지시</div>
+            <div class="step-desc">"먼저 할 일 추가 버튼만 만들어줘" → 확인하고, 피드백하고, 다음으로</div>
+          </div>
+          <div class="growth-step current" data-step="3">
+            <div class="step-title">3단계: 바로바로 피드백</div>
+            <div class="step-desc">"버튼 위치가 애매한데, 오른쪽 아래로 옮겨줘" → 고치고, 확인하고, 다음으로</div>
+          </div>
+        </div>
 
         <h3>개념이 필요한 두 가지 이유</h3>
         <div class="comparison-grid">
@@ -631,16 +682,16 @@
             <div class="step-title">기능 요청 수준</div>
             <div class="step-desc">"로그인 만들어줘" (시작점)</div>
           </div>
-          <div class="growth-step" data-step="2">
-            <div class="step-title">명세 제공 수준</div>
+          <div class="growth-step current" data-step="2">
+            <div class="step-title">명세 제공 수준 ← 오늘의 목표</div>
             <div class="step-desc">"이메일+비밀번호 입력, 유효성 검사 포함"</div>
           </div>
           <div class="growth-step" data-step="3">
             <div class="step-title">구조 이해 수준</div>
             <div class="step-desc">"프론트는 React, 백엔드는 Node.js로"</div>
           </div>
-          <div class="growth-step current" data-step="4">
-            <div class="step-title">설계 대화 수준 ← 오늘의 목표</div>
+          <div class="growth-step" data-step="4">
+            <div class="step-title">설계 대화 수준</div>
             <div class="step-desc">"아키텍처 추천해봐" → 판단 → "이렇게 해줘"</div>
           </div>
           <div class="growth-step" data-step="5">
@@ -649,18 +700,27 @@
           </div>
         </div>
 
-        <h2>대화법 비교</h2>
-        <div class="comparison-grid">
-          <div class="comparison-card traditional">
-            <h3>Bad</h3>
-            <p style="font-size:20px;color:var(--color-text-secondary)">"투두 앱 만들어줘"</p>
-            <p style="font-size:18px;color:var(--color-text-muted)">→ AI가 뭔가 만들긴 하는데, 원하던 게 아님</p>
-          </div>
-          <div class="comparison-card vibe">
-            <h3>Good</h3>
-            <p style="font-size:20px;color:var(--color-text-secondary)">"할 일 관리 앱을 만들고 싶어. 어떤 기능들이 필요할지 같이 정리해볼까?"</p>
-            <p style="font-size:18px;color:var(--color-text-muted)">→ 대화하면서 기획이 잡힘</p>
-          </div>
+        <h2>대화법 3단계 비교</h2>
+        <p>같은 "상품 검색/필터" 기능이라도 지시 수준에 따라 결과가 완전히 달라요.</p>
+
+        <h3>수준 1: 막연한 지시</h3>
+        <div class="comparison-card traditional" style="margin-bottom:16px">
+          <p style="font-size:20px;color:var(--color-text-secondary)">"상품 검색 기능 만들어줘"</p>
+          <p style="font-size:16px;color:var(--color-text-muted)">→ 검색창만 있고 필터 없음. 필터 추가하니 기존 검색 망가짐. 뭐가 문제인지도 모름.</p>
+        </div>
+
+        <h3>수준 2: 구체적 지시</h3>
+        <div class="comparison-card" style="border-top:3px solid rgba(234,179,8,0.5);margin-bottom:16px">
+          <p style="font-size:20px;color:var(--color-text-secondary)">"검색창 + 카테고리 필터(의류/전자/식품) + 가격대 필터(1만 이하/1~5만/5만 이상)"</p>
+          <p style="font-size:16px;color:var(--color-text-muted)">→ 기능은 나옴. 근데 상품 1000개 넘으면 느려짐. 구조 문제에 대응 어려움.</p>
+        </div>
+
+        <h3>수준 3: 기술적 지시 (목표)</h3>
+        <div class="comparison-card vibe" style="margin-bottom:16px">
+          <p style="font-size:20px;color:var(--color-text-secondary)">"상품 검색/필터 만들 건데, <strong>방식 먼저 정하자</strong>. 상품 많아질 수 있어서 성능도 고려."<br>
+          → AI: "프론트 필터링 vs 백엔드 API 필터링 두 가지 있어요"<br>
+          → "일단 1번으로 가고, <strong>나중에 바꾸기 쉽게 구조 잡아줘</strong>"</p>
+          <p style="font-size:16px;color:var(--color-text-muted)">→ 방식의 장단점을 듣고 내가 판단. 구조를 이해하고 있어서 문제 생기면 어디를 고칠지 앎.</p>
         </div>
 
         <h3>정확한 용어를 쓰면 AI가 더 잘 이해해요</h3>
@@ -712,19 +772,13 @@
           </div>
         </div>
 
-        <h3>실패 예시: 상품 검색/필터링</h3>
-        <div class="comparison-grid">
-          <div class="comparison-card traditional">
-            <h3>Bad</h3>
-            <p style="font-size:18px;color:var(--color-text-secondary)">"상품 검색이랑 필터링 기능 만들어줘"</p>
-            <p style="font-size:16px;color:var(--color-text-muted)">→ 가격순 정렬이 안 되고, 카테고리가 뒤죽박죽</p>
-          </div>
-          <div class="comparison-card vibe">
-            <h3>Good</h3>
-            <p style="font-size:18px;color:var(--color-text-secondary)">"상품 검색을 만들 건데. 1)이름 검색 2)카테고리별 필터 3)가격순/인기순 정렬. 먼저 정리해줘"</p>
-            <p style="font-size:16px;color:var(--color-text-muted)">→ 구조부터 잡고, 하나씩 구현</p>
-          </div>
-        </div>
+        <h3>유능한 매니저의 3가지 조건</h3>
+        <table>
+          <tr><th>조건</th><th>구체적으로</th></tr>
+          <tr><td><strong>뭘 만들지 명확히 하기</strong></td><td>"이런 사람이 이렇게 쓸 앱이야" — 기획 문서로 정리</td></tr>
+          <tr><td><strong>한 입 크기로 나누기</strong></td><td>"먼저 이 화면만 만들어줘" — 한 번에 하나씩</td></tr>
+          <tr><td><strong>바로바로 피드백하기</strong></td><td>"여기 이렇게 고쳐줘" → 확인 → 다음</td></tr>
+        </table>
 
         <h2>3가지 마인드셋</h2>
         <div class="ai-grid">
@@ -745,11 +799,33 @@
           </div>
         </div>
 
+        <h3>왜 "한 번에 하나씩"이 중요할까요?</h3>
+        <p>기술적인 이유가 3가지 있어요.</p>
+        <div class="ai-grid">
+          <div class="ai-card" style="padding:24px">
+            <span style="font-size:32px">📏</span>
+            <span class="ai-name" style="font-size:16px;white-space:normal">1. 토큰 제한</span>
+            <span style="font-size:13px;color:var(--color-text-muted)">AI가 한 번에 읽고 쓸 수 있는 양에 물리적 한계가 있어요</span>
+          </div>
+          <div class="ai-card" style="padding:24px">
+            <span style="font-size:32px">🧠</span>
+            <span class="ai-name" style="font-size:16px;white-space:normal">2. 대화 압축 → 맥락 소실</span>
+            <span style="font-size:13px;color:var(--color-text-muted)">대화가 길어지면 AI가 이전 내용을 압축 → 중요한 맥락이 빠져요</span>
+          </div>
+          <div class="ai-card" style="padding:24px">
+            <span style="font-size:32px">🖱️</span>
+            <span class="ai-name" style="font-size:16px;white-space:normal">3. UX 판단 불가</span>
+            <span style="font-size:13px;color:var(--color-text-muted)">"이게 내가 원하던 느낌이야"는 결국 사람만 판단 가능</span>
+          </div>
+        </div>
+
         <div class="insight-box">
-          <p><strong>왜 "한 번에 하나씩"이 중요할까요? — 토큰 제한</strong><br>
-          AI는 한 번에 처리할 수 있는 양(토큰)이 정해져 있어요. 대화가 길어지면 앞에서 한 말을 잊어버려요. 그래서 <strong>"한 번에 하나씩"</strong> 시키는 게 중요해요.<br><br>
-          기능 10개를 한꺼번에 말하면 → 뒤죽박죽<br>
-          하나씩 만들면 → 깔끔하고 정확</p>
+          <p><strong>"잘했겠지" 전제의 위험</strong><br>
+          기능 A 만들고 → 확인 안 하고 → 기능 B 만들고 → 확인 안 하고...<br>
+          나중에 보면 기능 A에 버그가 있어요. 근데 그 위에 B, C, D를 쌓아버렸어요.<br><br>
+          마치 <strong>1층 기둥이 비뚤어진 줄 모르고 2층, 3층 올린 아파트</strong>처럼요.<br>
+          나중에 고치려면? 거의 처음부터 다시 해야 해요.<br><br>
+          그래서 <strong>"하나 만들고 → 확인하고 → 다음"</strong>이 결국 더 빨라요.</p>
         </div>
 
         <blockquote>
@@ -1641,7 +1717,7 @@ git push</pre>
 
         <div class="key-message">
           <span class="key-icon">🎯</span>
-          <p class="key-text">바이브 코딩은 마법이 아니에요. AI와 대화하면서, 확인하면서, 함께 만들어가는 거예요.</p>
+          <p class="key-text">여러분은 이미 바이브 코더예요. AI에게 "만들어줘"가 아니라 "같이 만들자"고 말할 수 있으니까요.</p>
         </div>
 
         <div class="flow-diagram">
@@ -1677,6 +1753,11 @@ git push</pre>
         </div>
         <p style="text-align:center;font-size:18px;color:var(--color-text-muted)">축하해요! 이 문서 하나로 바이브 코딩의 개념부터 실제 자동화 봇 배포까지 해냈어요.</p>
 
+        <blockquote>
+          기억나시죠? 처음에 AI한테 시키면 뭔가 나오긴 하는데, 기능 하나 추가하면 꼬이고, 결국 포기했던 그 경험.<br><br>
+          이제 여러분은 달라요. <strong>기획부터 시작하고, 한 번에 하나씩 만들고, 결과를 확인하고 피드백하는 법</strong>을 알게 됐으니까요.
+        </blockquote>
+
         <h2>오늘 배운 전체 흐름</h2>
         <table>
           <tr>
@@ -1705,83 +1786,23 @@ git push</pre>
           </tr>
         </table>
 
-        <h2>오늘 기억할 5가지</h2>
+        <h2>오늘 기억할 3가지</h2>
         <div class="growth-path">
           <div class="growth-step" data-step="1">
-            <div class="step-title">바이브 코딩 = 코드 대신 명확한 지침으로 AI를 지휘하는 것</div>
+            <div class="step-title">코드를 몰라도 돼요. 대신 "뭘 만들지, 왜 만들지"는 명확히 알아야 해요.</div>
           </div>
-          <div class="growth-step" data-step="2">
-            <div class="step-title">코드를 "짜는 것"은 몰라도 되지만, "보는 것"은 배워야 해요</div>
+          <div class="growth-step current" data-step="2">
+            <div class="step-title">"만들어줘" 한마디가 아니라, "같이 정리해보자"로 시작하세요.</div>
           </div>
           <div class="growth-step" data-step="3">
-            <div class="step-title">AI는 유능한 신입사원 — 좋은 상사가 되세요</div>
-          </div>
-          <div class="growth-step" data-step="4">
-            <div class="step-title">도구 4가지: Claude Code, VS Code, Git, NPM</div>
-          </div>
-          <div class="growth-step" data-step="5">
-            <div class="step-title">"대화 → 확인 → 피드백 → 반복"이 바이브 코딩의 핵심 루프</div>
+            <div class="step-title">대화 → 확인 → 피드백 → 반복. 이 루프를 돌릴 줄 알면 뭐든 만들 수 있어요.</div>
           </div>
         </div>
 
-        <h2>다음 단계 로드맵</h2>
-        <table>
-          <tr>
-            <th>시기</th>
-            <th>할 일</th>
-            <th>난이도</th>
-          </tr>
-          <tr>
-            <td><strong>오늘</strong></td>
-            <td>Claude Code 설치 + 첫 대화</td>
-            <td><span class="badge-easy">쉬움</span></td>
-          </tr>
-          <tr>
-            <td><strong>이번 주</strong></td>
-            <td>VS Code + Git 세팅 + "할일 앱" 만들어보기</td>
-            <td><span class="badge-easy">쉬움</span></td>
-          </tr>
-          <tr>
-            <td><strong>이번 달</strong></td>
-            <td>뉴스 봇 직접 구축 + 슬랙 연동</td>
-            <td><span class="badge-medium">보통</span></td>
-          </tr>
-          <tr>
-            <td><strong>다음 달</strong></td>
-            <td>나만의 자동화 프로젝트 기획 + 배포</td>
-            <td><span class="badge-challenge">도전</span></td>
-          </tr>
-        </table>
-
         <blockquote>
-          "바이브 코딩은 마법이 아니에요.<br>
-          AI와 대화하면서, 확인하면서, 함께 만들어가는 거예요."
+          "코딩을 배운 게 아니에요. AI와 대화하는 법을 배운 거예요.<br>
+          그리고 그게, 지금 이 시대에서 가장 강력한 기술이에요."
         </blockquote>
-
-        <h3>더 깊이 배우고 싶다면</h3>
-        <p>이 문서는 <a href="https://max5.ai" target="_blank">max5.ai</a> 바이브 코딩 시리즈 35편 중 Part 1(마인드셋) + Part 2(도구 세팅) + Part 6(자동화)를 다뤘어요.</p>
-        <table>
-          <tr>
-            <th>다음 단계</th>
-            <th>내용</th>
-          </tr>
-          <tr>
-            <td><strong>Part 3</strong></td>
-            <td>프론트엔드/백엔드, API, 데이터 흐름 이해</td>
-          </tr>
-          <tr>
-            <td><strong>Part 4</strong></td>
-            <td>첫 웹 프로젝트 만들기 (기획→프론트→백엔드→배포)</td>
-          </tr>
-          <tr>
-            <td><strong>Part 5</strong></td>
-            <td>아키텍처, 디자인 패턴, 상태 관리</td>
-          </tr>
-          <tr>
-            <td><strong>Part 7-8</strong></td>
-            <td>실무 프로젝트 (DB, CRUD, 대시보드) + 디버깅</td>
-          </tr>
-        </table>
       </section>
 
     </main>
