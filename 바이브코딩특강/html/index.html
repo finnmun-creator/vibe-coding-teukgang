@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finn과 함께하는 바이브 코딩 입문</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-title-row">
+          <img src="images/logo.png" alt="번개장터" class="sidebar-logo">
+          <h1>Finn과 함께하는 바이브 코딩 입문</h1>
+        </div>
+        <p>1강: Claude Code 설치부터 자동화 실습까지</p>
+      </div>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link active" data-target="overview">
+            <span class="nav-icon">1</span>
+            개요
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-target="what-is">
+            <span class="nav-icon">2</span>
+            바이브 코딩이란
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-target="mindset">
+            <span class="nav-icon">3</span>
+            유능한 상사 되기
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-target="tools">
+            <span class="nav-icon">4</span>
+            도구 세팅
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-target="hands-on">
+            <span class="nav-icon">5</span>
+            실전: 뉴스 봇 만들기
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-target="summary">
+            <span class="nav-icon">6</span>
+            정리
+          </a>
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <span id="progress-text">1 / 6 섹션</span>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+      <!-- ==================== 섹션 0: 개요 ==================== -->
+      <section id="overview" class="content-section active">
+        <div class="key-message">
+          <span class="key-icon">🎯</span>
+          <p class="key-text">코드를 짜는 시대에서, AI를 지휘하는 시대로 바뀌었어요.</p>
+        </div>
+
+        <blockquote>
+          "AI한테 시키면 뭔가 나오긴 해요. 근데 거기서 끝이에요."<br><br>
+          기능 하나 추가하려니까 꼬이고, 에러 나면 뭐가 문제인지 모르겠고,<br>
+          결국 반쯤 만들다 포기하게 되죠?
+        </blockquote>
+
+        <h3>처음엔 잘 되는데...</h3>
+        <p>처음에 AI한테 시키면 뭔가 그럴듯한 게 나와요. "오, 진짜 되네?" 하고 신나요.</p>
+        <p>그래서 기능을 하나 더 추가해요. "여기에 로그인도 붙여줘"</p>
+        <p>그런데 갑자기 아까 되던 게 안 돼요. 에러가 줄줄 나와요. 어디를 고쳐야 하는지도 모르겠어요.</p>
+        <p>결국 "처음부터 다시 하자" → 3번째 반복하면... 포기.</p>
+        <p><strong>이건 AI가 무능해서가 아니에요. 시키는 방법을 몰라서예요.</strong></p>
+        <p>그런데 AI의 능력 자체는 놀라울 정도로 발전했어요. 문제는 그 능력을 끌어내는 방법이에요.</p>
+
+        <h2>AI 코딩의 발전 과정</h2>
+        <table>
+          <tr>
+            <th>시기</th>
+            <th>수준</th>
+            <th>한계</th>
+          </tr>
+          <tr>
+            <td><strong>2020년 이전</strong></td>
+            <td>"if문 예제 알려줘" → 코드 조각만</td>
+            <td>조립은 직접</td>
+          </tr>
+          <tr>
+            <td><strong>2022년 (ChatGPT)</strong></td>
+            <td>"로그인 기능 만들어줘" → 코드 덩어리</td>
+            <td>복붙/파일관리 직접</td>
+          </tr>
+          <tr>
+            <td><strong>2024년~현재 (Claude Code)</strong></td>
+            <td>"앱 만들어줘" → 프로젝트 전체 생성</td>
+            <td>지휘하는 법을 알아야 함</td>
+          </tr>
+        </table>
+
+        <h2>결국 차이는 "명령하는 사람"</h2>
+        <div class="ai-grid" style="justify-content:center">
+          <div class="ai-card highlight" style="min-width:200px;padding:24px">
+            <span style="font-size:36px">🤖</span>
+            <span class="ai-name" style="font-size:18px;white-space:normal;margin-top:8px">AI 성능은 다 똑같아요</span>
+            <span style="font-size:14px;color:var(--color-text-muted);margin-top:4px">ChatGPT든 Claude든, 능력은 비슷해요</span>
+          </div>
+          <div class="ai-card highlight" style="min-width:200px;padding:24px">
+            <span style="font-size:36px">🎯</span>
+            <span class="ai-name" style="font-size:18px;white-space:normal;margin-top:8px">차이는 "어떻게 시키느냐"</span>
+            <span style="font-size:14px;color:var(--color-text-muted);margin-top:4px">같은 AI, 다른 결과</span>
+          </div>
+          <div class="ai-card highlight" style="min-width:200px;padding:24px">
+            <span style="font-size:36px">📚</span>
+            <span class="ai-name" style="font-size:18px;white-space:normal;margin-top:8px">이 특강이 그걸 알려드려요</span>
+            <span style="font-size:14px;color:var(--color-text-muted);margin-top:4px">"어떻게 시키느냐"의 기술</span>
+          </div>
+        </div>
+
+        <div class="insight-box">
+          <p>그래서 바이브 코딩이 필요해요.</p>
+        </div>
+
+        <h2>오늘의 흐름</h2>
+        <div class="flow-diagram">
+          <div class="flow-node">
+            <span class="flow-emoji">💡</span>
+            <span class="flow-label">개념</span>
+            <span class="flow-desc">바이브 코딩이란</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">🧠</span>
+            <span class="flow-label">마인드셋</span>
+            <span class="flow-desc">유능한 상사 되기</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">🔧</span>
+            <span class="flow-label">도구</span>
+            <span class="flow-desc">4가지 무기</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">🚀</span>
+            <span class="flow-label">실전</span>
+            <span class="flow-desc">뉴스 봇 만들기</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">📋</span>
+            <span class="flow-label">정리</span>
+            <span class="flow-desc">다음 단계</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== 섹션 1: 바이브 코딩이란 ==================== -->
+      <section id="what-is" class="content-section">
+        <h1>바이브 코딩이란</h1>
+
+        <div class="key-message">
+          <span class="key-icon">🎯</span>
+          <p class="key-text">바이브 코딩 = 코드 대신, 명확한 의도와 예상 결과로 AI를 지휘하는 것</p>
+        </div>
+
+        <blockquote>
+          "바이브"면 대충 느낌만 전달하면 되는 거 아니에요?<br>
+          — 아닙니다. 여기서 오해하면 안 돼요.
+        </blockquote>
+
+        <h2>정의</h2>
+        <p>코드 한 줄 한 줄 짜는 게 아니라,<br>
+        <strong>"이 버튼 누르면 이렇게 동작해야 해"</strong>라고 의도와 예상 결과를 구체적으로 지시하는 방식이에요.</p>
+
+        <h3>바이브 코딩 ≠ 대충 말하기</h3>
+        <div class="insight-box">
+          <p>"바이브"라는 단어 때문에 헷갈릴 수 있어요. "느낌만 전달하면 AI가 알아서 해주겠지?" — 이게 안 돼서 다들 막히는 거예요.</p>
+        </div>
+        <p>바이브 코딩의 진짜 의미:</p>
+        <ul class="checklist">
+          <li>코드 문법은 몰라도 돼요</li>
+          <li>대신 <strong>뭘 만들지</strong>, <strong>왜 만들지</strong>, <strong>어떻게 동작해야 하는지</strong>는 명확히 알아야 해요</li>
+          <li>AI한테 기술적인 지침을 정확하게 전달하는 게 핵심이에요</li>
+        </ul>
+
+        <h3>MVP란?</h3>
+        <p><strong>MVP(Minimum Viable Product)</strong> = 최소 기능 제품. 핵심 기능만 있는 버전을 빨리 만들어서 반응을 보는 거예요. 바이브 코딩은 이 MVP를 빠르게 만드는 데 특히 강해요.</p>
+
+        <h2>전통 코딩 vs 바이브 코딩</h2>
+        <div class="comparison-grid">
+          <div class="comparison-card traditional">
+            <h3>전통적인 코딩</h3>
+            <ul>
+              <li>사람이 직접 코드를 짠다</li>
+              <li>문법, 규칙을 외워야 한다</li>
+              <li>오류 하나에 몇 시간 고민</li>
+              <li>혼자 모든 걸 알아야 한다</li>
+            </ul>
+          </div>
+          <div class="comparison-card vibe">
+            <h3>바이브 코딩</h3>
+            <ul>
+              <li>AI가 코드를 짜고, 사람이 방향을 잡는다</li>
+              <li>의도와 결과를 명확하게 지시한다</li>
+              <li>AI한테 물어보면 바로 해결책 제시</li>
+              <li>AI와 대화하면서 같이 만든다</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section-image-wrap">
+          <img src="images/traditional_vs_vibe_coding.png" alt="전통 코딩 vs 바이브 코딩 비교" class="section-image">
+          <p class="section-image-caption">전통 코딩: 벽돌을 직접 쌓는 것 vs 바이브 코딩: AI와 함께 설계하는 것</p>
+        </div>
+
+        <div class="insight-box">
+          <p><strong>왜 지금 바이브 코딩이 가능해졌을까요?</strong> 2022년까지는 AI가 코드 조각만 줄 수 있었어요. 복붙과 조립은 직접 해야 했죠. 하지만 2024년부터 AI가 <strong>프로젝트 전체</strong>를 다룰 수 있게 됐어요. 파일 생성, 코드 작성, 에러 수정까지. 남은 건 <strong>"어떻게 시키느냐"</strong>뿐이에요.</p>
+        </div>
+
+        <h2>같은 목표, 다른 접근</h2>
+        <p><strong>할일 관리 앱</strong>을 만든다고 하면:</p>
+        <div class="comparison-grid">
+          <div class="comparison-card traditional">
+            <h3>전통 방식</h3>
+            <ul>
+              <li>언어 선택 → 문법 공부</li>
+              <li>프레임워크 학습</li>
+              <li>코드 작성 → 삽질...</li>
+              <li>6개월~1년</li>
+            </ul>
+          </div>
+          <div class="comparison-card vibe">
+            <h3>바이브 코딩</h3>
+            <ul>
+              <li>AI에게 말하기</li>
+              <li>기획 대화 → 코드 생성</li>
+              <li>피드백 → 반복</li>
+              <li>대화할 줄 알면 시작</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2>바이브 코딩으로 뭘 만들 수 있나요?</h2>
+        <p>코딩 경험 없는 사람들이 실제로 바이브 코딩으로 만드는 것들이에요.</p>
+        <div class="ai-grid">
+          <div class="ai-card" style="padding:24px">
+            <span style="font-size:32px">⚙️</span>
+            <span class="ai-name" style="font-size:16px;white-space:normal">업무 자동화</span>
+            <span style="font-size:13px;color:var(--color-text-muted)">뉴스 봇, 엑셀 자동 병합, 이메일 분류</span>
+          </div>
+          <div class="ai-card" style="padding:24px">
+            <span style="font-size:32px">🌐</span>
+            <span class="ai-name" style="font-size:16px;white-space:normal">웹사이트 / 서비스</span>
+            <span style="font-size:13px;color:var(--color-text-muted)">포트폴리오, 스터디 모임, 소규모 쇼핑몰</span>
+          </div>
+          <div class="ai-card" style="padding:24px">
+            <span style="font-size:32px">📱</span>
+            <span class="ai-name" style="font-size:16px;white-space:normal">간단한 앱</span>
+            <span style="font-size:13px;color:var(--color-text-muted)">습관 트래커, 가계부, 운동 기록</span>
+          </div>
+          <div class="ai-card" style="padding:24px">
+            <span style="font-size:32px">📊</span>
+            <span class="ai-name" style="font-size:16px;white-space:normal">데이터 분석</span>
+            <span style="font-size:13px;color:var(--color-text-muted)">매출 대시보드, 설문 분석, 가격 모니터링</span>
+          </div>
+        </div>
+        <div class="insight-box">
+          <p>이 사람들이 코딩을 배웠을까요? 아니에요. <strong>AI와 대화하는 법</strong>을 배웠어요.</p>
+        </div>
+
+        <h2>비개발자들이 만든 실제 사례</h2>
+        <p style="margin-bottom:16px">카드를 클릭하면 자세한 내용을 볼 수 있어요.</p>
+        <div class="ai-grid">
+          <div class="ai-card case-card" data-modal="case-1">
+            <span class="case-emoji">🔗</span>
+            <span class="ai-name">LinkStash</span>
+            <span class="case-creator">디자이너 (코딩 무경험)</span>
+            <span class="ai-badge cli">Cursor</span>
+          </div>
+          <div class="ai-card case-card" data-modal="case-2">
+            <span class="case-emoji">📂</span>
+            <span class="ai-name">Social Archiver</span>
+            <span class="case-creator">비개발자 (임형균)</span>
+            <span class="ai-badge ide">바이브코딩</span>
+          </div>
+          <div class="ai-card case-card" data-modal="case-3">
+            <span class="case-emoji">🥗</span>
+            <span class="ai-name">BLight</span>
+            <span class="case-creator">PM/디자이너</span>
+            <span class="ai-badge ide">Lovable</span>
+          </div>
+          <div class="ai-card case-card" data-modal="case-4">
+            <span class="case-emoji">🎲</span>
+            <span class="ai-name">Skull King 계산기</span>
+            <span class="case-creator">sewookori studio</span>
+            <span class="ai-badge ide">Antigravity</span>
+          </div>
+          <div class="ai-card case-card" data-modal="case-5">
+            <span class="case-emoji">📸</span>
+            <span class="ai-name">Photo AI</span>
+            <span class="case-creator">Pieter Levels</span>
+            <span class="ai-badge cli">Cursor</span>
+          </div>
+          <div class="ai-card case-card" data-modal="case-6">
+            <span class="case-emoji">🎠</span>
+            <span class="ai-name">aiCarousels</span>
+            <span class="case-creator">Fernando (제품 디자이너)</span>
+            <span class="ai-badge ide">ChatGPT</span>
+          </div>
+          <div class="ai-card case-card" data-modal="case-7">
+            <span class="case-emoji">💪</span>
+            <span class="ai-name">Hypertropher</span>
+            <span class="case-creator">비개발자</span>
+            <span class="ai-badge cli">Cursor</span>
+          </div>
+        </div>
+
+        <h2>바이브 코딩의 한계</h2>
+        <table>
+          <tr>
+            <th>잘 되는 것</th>
+            <th>어려운 것</th>
+          </tr>
+          <tr>
+            <td>개인용/소규모 도구</td>
+            <td>수백만 명 동시 접속 서비스</td>
+          </tr>
+          <tr>
+            <td>프로토타입, MVP</td>
+            <td>은행/병원급 보안 시스템</td>
+          </tr>
+          <tr>
+            <td>반복 업무 자동화</td>
+            <td>게임 엔진 같은 고성능 프로그램</td>
+          </tr>
+          <tr>
+            <td>간단한 웹/앱</td>
+            <td>기존 복잡한 시스템에 기능 추가</td>
+          </tr>
+        </table>
+
+        <h2>바이브 코딩의 핵심은 "대화"</h2>
+        <div class="flow-diagram">
+          <div class="flow-node">
+            <span class="flow-emoji">💬</span>
+            <span class="flow-label">말하기</span>
+            <span class="flow-desc">AI에게 요청</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">👀</span>
+            <span class="flow-label">확인</span>
+            <span class="flow-desc">결과 살펴보기</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">🔄</span>
+            <span class="flow-label">피드백</span>
+            <span class="flow-desc">"이건 좋고, 저건 고쳐줘"</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">🔁</span>
+            <span class="flow-label">반복</span>
+            <span class="flow-desc">완성될 때까지</span>
+          </div>
+        </div>
+        <p style="text-align:center;font-size:18px;color:var(--color-text-muted)">한 번에 완성품이 나오지 않아요. 대화하면서 만들어가는 거예요.</p>
+
+        <h3>바이브 코딩식 대화법 맛보기</h3>
+        <div class="comparison-grid">
+          <div class="comparison-card traditional">
+            <h3>이렇게 하면 실패</h3>
+            <p style="font-size:18px;color:var(--color-text-secondary)">❌ "투두 앱 만들어줘"</p>
+            <p style="font-size:16px;color:var(--color-text-muted)">→ AI: 뭔가 만들긴 하는데... 이게 내가 원하던 거야?</p>
+          </div>
+          <div class="comparison-card vibe">
+            <h3>이렇게 하면 성공</h3>
+            <p style="font-size:18px;color:var(--color-text-secondary)">✅ "할 일 관리 앱을 만들고 싶어. 어떤 기능들이 필요할지 같이 정리해볼까?"</p>
+            <p style="font-size:16px;color:var(--color-text-muted)">→ AI: "네, 먼저 핵심 기능부터 정리해볼게요..."</p>
+          </div>
+        </div>
+        <div class="insight-box">
+          <p><strong>"만들어줘"가 아니라 "같이 정리해보자"</strong>예요. AI와 대화하면서 기획이 잡히는 거예요.</p>
+        </div>
+
+        <h3>바이브 코딩을 하다 보면</h3>
+        <div class="growth-path">
+          <div class="growth-step" data-step="1">
+            <div class="step-title">처음</div>
+            <div class="step-desc">AI가 뭘 하는지 하나도 몰라요. "뭔가 막 만드네..."</div>
+          </div>
+          <div class="growth-step" data-step="2">
+            <div class="step-title">몇 번 하다 보면</div>
+            <div class="step-desc">"아, 지금 로그인 부분 고치고 있구나"</div>
+          </div>
+          <div class="growth-step current" data-step="3">
+            <div class="step-title">결국</div>
+            <div class="step-desc">코드를 짤 줄은 몰라도, <strong>볼 줄은 알게 돼요</strong>. 이게 성장이에요.</div>
+          </div>
+        </div>
+
+        <blockquote>
+          자동차를 직접 만들 줄 몰라도 운전은 할 수 있어요.<br>
+          AI가 차를 만들어주지만, <strong>운전은 여러분이 해요.</strong>
+        </blockquote>
+
+        <div class="section-image-wrap">
+          <img src="images/vibe_coding_driving_analogy.png" alt="바이브 코딩 운전 비유" class="section-image">
+          <p class="section-image-caption">여러분은 방향(Direction)을, AI는 코드(Code)를 담당해요</p>
+        </div>
+
+      </section>
+
+      <!-- ==================== 섹션 2: 유능한 상사 되기 ==================== -->
+      <section id="mindset" class="content-section">
+        <h1>AI의 유능한 상사 되기</h1>
+
+        <div class="key-message">
+          <span class="key-icon">🎯</span>
+          <p class="key-text">AI는 유능한 신입사원. 뭘 만들지 모르는 건 AI가 아니라 여러분의 문제예요.</p>
+        </div>
+
+        <blockquote>
+          "만들어줘" 한마디면 될 줄 알았는데...<br>
+          왜 내가 원하는 게 안 나오죠?
+        </blockquote>
+
+        <h2>몰라도 되는 것 vs 알아야 하는 것</h2>
+        <table>
+          <tr>
+            <th>몰라도 됨</th>
+            <th>알아야 함</th>
+          </tr>
+          <tr>
+            <td>프로그래밍 언어 문법</td>
+            <td>뭘 만들고 싶은지 (목적)</td>
+          </tr>
+          <tr>
+            <td>복잡한 알고리즘</td>
+            <td>프로그램의 종류 (웹? 앱? 자동화?)</td>
+          </tr>
+          <tr>
+            <td>코드를 직접 타이핑하는 것</td>
+            <td>AI 결과를 확인하고 피드백하는 법</td>
+          </tr>
+          <tr>
+            <td>function, const 같은 키워드</td>
+            <td>"이건 로그인 기능이구나" 판독 능력</td>
+          </tr>
+        </table>
+
+        <h3>개념이 필요한 두 가지 이유</h3>
+        <div class="comparison-grid">
+          <div class="comparison-card" style="border-top:3px solid rgba(234,179,8,0.5)">
+            <h3 style="color:var(--color-warning)">1. 명확한 지시</h3>
+            <p style="font-size:18px;color:var(--color-text-secondary)">"알아서 해줘"가 아니라 구체적인 주문서가 돼요. 개념을 알아야 정확히 시킬 수 있어요.</p>
+          </div>
+          <div class="comparison-card" style="border-top:3px solid rgba(59,130,246,0.5)">
+            <h3 style="color:var(--color-info)">2. AI 결과 판단</h3>
+            <p style="font-size:18px;color:var(--color-text-secondary)">AI가 만들어준 결과물을 평가할 수 있어야 해요. "이게 맞는 건가?" 판단하려면 기본 개념이 필요해요.</p>
+          </div>
+        </div>
+
+        <h3>알아야 할 핵심 개념 5가지</h3>
+        <div class="ai-grid">
+          <div class="ai-card" style="padding:24px">
+            <span style="font-size:32px">🖥️</span>
+            <span class="ai-name" style="font-size:16px;white-space:normal">프론트엔드/백엔드</span>
+            <span style="font-size:13px;color:var(--color-text-muted)">보이는 부분 vs 뒤에서 도는 부분</span>
+          </div>
+          <div class="ai-card" style="padding:24px">
+            <span style="font-size:32px">🗄️</span>
+            <span class="ai-name" style="font-size:16px;white-space:normal">데이터베이스</span>
+            <span style="font-size:13px;color:var(--color-text-muted)">정보 저장소 (엑셀 시트 같은 것)</span>
+          </div>
+          <div class="ai-card" style="padding:24px">
+            <span style="font-size:32px">🔌</span>
+            <span class="ai-name" style="font-size:16px;white-space:normal">API</span>
+            <span style="font-size:13px;color:var(--color-text-muted)">프로그램끼리 대화하는 통로</span>
+          </div>
+          <div class="ai-card" style="padding:24px">
+            <span style="font-size:32px">📁</span>
+            <span class="ai-name" style="font-size:16px;white-space:normal">폴더 구조</span>
+            <span style="font-size:13px;color:var(--color-text-muted)">파일을 어떻게 정리하는가</span>
+          </div>
+          <div class="ai-card" style="padding:24px">
+            <span style="font-size:32px">🔀</span>
+            <span class="ai-name" style="font-size:16px;white-space:normal">데이터 흐름</span>
+            <span style="font-size:13px;color:var(--color-text-muted)">정보가 어디서 와서 어디로 가는가</span>
+          </div>
+        </div>
+
+        <h3>학습 순서</h3>
+        <div class="flow-diagram">
+          <div class="flow-node">
+            <span class="flow-emoji">📦</span>
+            <span class="flow-label">종류</span>
+            <span class="flow-desc">프로그램 종류</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">🏗️</span>
+            <span class="flow-label">구조</span>
+            <span class="flow-desc">프론트/백엔드</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">📐</span>
+            <span class="flow-label">설계</span>
+            <span class="flow-desc">설계 개념</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">🔧</span>
+            <span class="flow-label">도구</span>
+            <span class="flow-desc">Claude Code 등</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">🚀</span>
+            <span class="flow-label">실전</span>
+            <span class="flow-desc">직접 만들기</span>
+          </div>
+        </div>
+
+        <h3>코드 "짜기" vs "보기"의 차이</h3>
+        <p>바이브 코딩은 코드를 직접 쓰는 게 아니에요. 하지만 AI가 만든 코드를 <strong>읽고 판단하는 능력</strong>은 필요해요. 아래 예시를 볼게요.</p>
+        <pre>function addTodo(text) {
+  const newTodo = {
+    id: Date.now(),
+    text: text,
+    done: false
+  };
+  todos.push(newTodo);
+}</pre>
+        <div class="comparison-grid">
+          <div class="comparison-card traditional">
+            <h3>짜는 것 (몰라도 됨)</h3>
+            <ul>
+              <li><code>function</code>, <code>const</code> 같은 키워드</li>
+              <li><code>Date.now()</code> 같은 함수 사용법</li>
+              <li><code>todos.push()</code> 같은 배열 조작 문법</li>
+            </ul>
+          </div>
+          <div class="comparison-card vibe">
+            <h3>보는 것 (알아야 함)</h3>
+            <ul>
+              <li>"할 일을 추가하는 기능이구나"</li>
+              <li>"새 할 일에 id, 텍스트, 완료 여부가 들어가는구나"</li>
+              <li>"목록에 추가하는 동작이구나"</li>
+            </ul>
+          </div>
+        </div>
+        <div class="insight-box">
+          <p>짜는 건 AI가 해요. <strong>보고 판단하는 건 여러분 몫이에요.</strong> "이 코드가 뭘 하는 건지" 흐름을 읽을 줄 알면 돼요.</p>
+        </div>
+
+        <h3>전통 코딩 학습 vs 바이브 코딩 학습</h3>
+        <div class="comparison-grid">
+          <div class="comparison-card traditional">
+            <h3>전통 코딩 학습</h3>
+            <p style="font-size:18px;color:var(--color-text-secondary)">"<code>for</code>문을 어떻게 쓰는지", "<code>if</code>문 다음에 뭐가 와야 하는지"</p>
+            <p style="font-size:16px;color:var(--color-text-muted)">→ 문법 세부사항에 집중</p>
+          </div>
+          <div class="comparison-card vibe">
+            <h3>바이브 코딩 학습</h3>
+            <p style="font-size:18px;color:var(--color-text-secondary)">"이 데이터를 하나씩 처리해야 해", "여기서 에러 체크가 필요해"</p>
+            <p style="font-size:16px;color:var(--color-text-muted)">→ 의도와 개념 이해에 집중</p>
+          </div>
+        </div>
+
+        <h2>5단계 성장 경로</h2>
+        <div class="growth-path">
+          <div class="growth-step" data-step="1">
+            <div class="step-title">기능 요청 수준</div>
+            <div class="step-desc">"로그인 만들어줘" (시작점)</div>
+          </div>
+          <div class="growth-step" data-step="2">
+            <div class="step-title">명세 제공 수준</div>
+            <div class="step-desc">"이메일+비밀번호 입력, 유효성 검사 포함"</div>
+          </div>
+          <div class="growth-step" data-step="3">
+            <div class="step-title">구조 이해 수준</div>
+            <div class="step-desc">"프론트는 React, 백엔드는 Node.js로"</div>
+          </div>
+          <div class="growth-step current" data-step="4">
+            <div class="step-title">설계 대화 수준 ← 오늘의 목표</div>
+            <div class="step-desc">"아키텍처 추천해봐" → 판단 → "이렇게 해줘"</div>
+          </div>
+          <div class="growth-step" data-step="5">
+            <div class="step-title">고도화</div>
+            <div class="step-desc">성능/보안/확장성까지 고려</div>
+          </div>
+        </div>
+
+        <h2>대화법 비교</h2>
+        <div class="comparison-grid">
+          <div class="comparison-card traditional">
+            <h3>Bad</h3>
+            <p style="font-size:20px;color:var(--color-text-secondary)">"투두 앱 만들어줘"</p>
+            <p style="font-size:18px;color:var(--color-text-muted)">→ AI가 뭔가 만들긴 하는데, 원하던 게 아님</p>
+          </div>
+          <div class="comparison-card vibe">
+            <h3>Good</h3>
+            <p style="font-size:20px;color:var(--color-text-secondary)">"할 일 관리 앱을 만들고 싶어. 어떤 기능들이 필요할지 같이 정리해볼까?"</p>
+            <p style="font-size:18px;color:var(--color-text-muted)">→ 대화하면서 기획이 잡힘</p>
+          </div>
+        </div>
+
+        <h2>기술적 지시가 가능한 매니저의 특징</h2>
+        <div class="growth-path">
+          <div class="growth-step" data-step="1">
+            <div class="step-title">선택지 물어보기</div>
+            <div class="step-desc">"로그인 방식 3가지 알려줘"</div>
+          </div>
+          <div class="growth-step" data-step="2">
+            <div class="step-title">상황에 맞게 판단</div>
+            <div class="step-desc">"우리는 소셜 로그인이 맞겠다"</div>
+          </div>
+          <div class="growth-step" data-step="3">
+            <div class="step-title">구체적으로 지시</div>
+            <div class="step-desc">"구글 로그인부터 붙여줘"</div>
+          </div>
+          <div class="growth-step" data-step="4">
+            <div class="step-title">결과 확인/검증</div>
+            <div class="step-desc">"로그인 버튼 누르니까 에러 나는데?"</div>
+          </div>
+          <div class="growth-step current" data-step="5">
+            <div class="step-title">직접 코딩하지 않기</div>
+            <div class="step-desc">코드 타이핑 X, 버그 직접 수정 X — 대신 정확히 지시해요</div>
+          </div>
+        </div>
+
+        <h3>실패 예시: 상품 검색/필터링</h3>
+        <div class="comparison-grid">
+          <div class="comparison-card traditional">
+            <h3>Bad</h3>
+            <p style="font-size:18px;color:var(--color-text-secondary)">"상품 검색이랑 필터링 기능 만들어줘"</p>
+            <p style="font-size:16px;color:var(--color-text-muted)">→ 가격순 정렬이 안 되고, 카테고리가 뒤죽박죽</p>
+          </div>
+          <div class="comparison-card vibe">
+            <h3>Good</h3>
+            <p style="font-size:18px;color:var(--color-text-secondary)">"상품 검색을 만들 건데. 1)이름 검색 2)카테고리별 필터 3)가격순/인기순 정렬. 먼저 정리해줘"</p>
+            <p style="font-size:16px;color:var(--color-text-muted)">→ 구조부터 잡고, 하나씩 구현</p>
+          </div>
+        </div>
+
+        <h2>3가지 마인드셋</h2>
+        <div class="ai-grid">
+          <div class="ai-card highlight" style="min-width:200px;padding:24px">
+            <span style="font-size:36px">🔄</span>
+            <span class="ai-name" style="font-size:18px;white-space:normal;margin-top:8px">"한 번에 안 돼도 괜찮아"</span>
+            <span style="font-size:14px;color:var(--color-text-muted);margin-top:4px">대화하면서 고쳐나가면 돼요</span>
+          </div>
+          <div class="ai-card highlight" style="min-width:200px;padding:24px">
+            <span style="font-size:36px">🧭</span>
+            <span class="ai-name" style="font-size:18px;white-space:normal;margin-top:8px">"내가 방향을 잡아야 해"</span>
+            <span style="font-size:14px;color:var(--color-text-muted);margin-top:4px">AI가 다 해주는 게 아니에요</span>
+          </div>
+          <div class="ai-card highlight" style="min-width:200px;padding:24px">
+            <span style="font-size:36px">🌱</span>
+            <span class="ai-name" style="font-size:18px;white-space:normal;margin-top:8px">"조금씩 배워가면 돼"</span>
+            <span style="font-size:14px;color:var(--color-text-muted);margin-top:4px">하나씩 만들다 보면 자연스럽게 알게 돼요</span>
+          </div>
+        </div>
+
+        <blockquote>
+          유능한 신입사원한테 "알아서 해"라고 하면 엉뚱한 결과.<br>
+          <strong>"이 고객 데이터를 이 기준으로 정리해줘"</strong>라고 하면 완벽한 결과.
+        </blockquote>
+
+      </section>
+
+      <!-- ==================== 섹션 3: 도구 세팅 ==================== -->
+      <section id="tools" class="content-section">
+        <h1>도구 세팅: 4가지 무기</h1>
+
+        <div class="key-message">
+          <span class="key-icon">🎯</span>
+          <p class="key-text">터미널, VS Code, Git, NPM — 이 4가지만 있으면 바이브 코딩 준비 완료!</p>
+        </div>
+
+        <blockquote>
+          터미널이라고 하면 겁부터 나시죠? 까만 화면에 깜빡이는 커서...<br>
+          근데 사실 카카오톡이랑 똑같아요.
+        </blockquote>
+
+        <h2>4대 도구</h2>
+        <div class="tool-grid">
+          <div class="tool-card">
+            <span class="tool-emoji">🤖</span>
+            <div class="tool-name">Claude Code</div>
+            <div class="tool-analogy">"손발이 달린 AI"</div>
+            <div class="tool-desc">웹 ChatGPT = "말만 하는" 조언자 (코드를 복붙해야 해요)<br>Claude Code = "손발이 달린" 실무자 (파일을 직접 열어서 수정해요)<br>터미널 = 사람↔컴퓨터 대화창 (카카오톡처럼!)</div>
+            <span class="tool-cmd">claude</span>
+          </div>
+          <div class="tool-card">
+            <span class="tool-emoji">💻</span>
+            <div class="tool-name">VS Code</div>
+            <div class="tool-analogy">"전문 주방"</div>
+            <div class="tool-desc">탐색기(냉장고) + 에디터(도마) + 터미널(가스레인지)<br>Korean Language Pack 확장 설치 추천</div>
+            <span class="tool-cmd">code .</span>
+          </div>
+          <div class="tool-card">
+            <span class="tool-emoji">💾</span>
+            <div class="tool-name">Git</div>
+            <div class="tool-analogy">"게임 세이브"</div>
+            <div class="tool-desc">Commit = 세이브 포인트 찍기<br>GitHub = 클라우드 세이브<br>컴퓨터 고장나도 안전해요</div>
+            <span class="tool-cmd">add → commit → push</span>
+          </div>
+          <div class="tool-card">
+            <span class="tool-emoji">📦</span>
+            <div class="tool-name">NPM + .env</div>
+            <div class="tool-analogy">"레시피북 + 금고"</div>
+            <div class="tool-desc">package.json = 재료 목록(레시피)<br>.env = 비밀번호 금고 (API 키 보관)<br>node_modules = 재료 보관함 (Git에 안 올려요, 언제든 재설치)</div>
+            <span class="tool-cmd">npm install</span>
+          </div>
+        </div>
+
+        <h2>설치 과정</h2>
+
+        <h3>터미널 열기</h3>
+        <p>Claude Code를 설치하려면 먼저 터미널을 열어야 해요.</p>
+        <div class="comparison-grid">
+          <div class="comparison-card" style="border-top:3px solid var(--color-info)">
+            <h3 style="color:var(--color-info)">🍎 Mac</h3>
+            <p style="font-size:18px;color:var(--color-text-secondary)"><code>Command</code> + <code>Space</code> → "Terminal" 검색 → 엔터</p>
+          </div>
+          <div class="comparison-card" style="border-top:3px solid var(--color-info)">
+            <h3 style="color:var(--color-info)">🪟 Windows</h3>
+            <p style="font-size:18px;color:var(--color-text-secondary)">윈도우 키 → "PowerShell" 검색 → 엔터</p>
+          </div>
+        </div>
+
+        <h3>Claude Code 설치 3단계</h3>
+        <p><strong>1단계:</strong> 설치 명령어 입력</p>
+        <pre>npm install -g @anthropic-ai/claude-code</pre>
+        <p><strong>2단계:</strong> Claude Code 실행</p>
+        <pre>claude</pre>
+        <p><strong>3단계:</strong> 로그인 — 브라우저가 자동으로 열려요. Claude 계정으로 로그인하면 승인 완료!</p>
+        <p>설치 확인: <code>claude --version</code> (버전 번호가 나오면 성공!)</p>
+        <div class="insight-box">
+          <p><strong>트러블슈팅:</strong> <code>npm: command not found</code> 오류가 나오면? → Node.js LTS 버전을 먼저 설치하세요 (<a href="https://nodejs.org" target="_blank">nodejs.org</a>). Node.js를 설치하면 npm이 자동으로 함께 설치돼요.</p>
+        </div>
+
+        <h3>GUI vs CLI 비교</h3>
+        <div class="comparison-grid">
+          <div class="comparison-card traditional">
+            <h3>GUI (마우스 방식)</h3>
+            <p style="font-size:18px;color:var(--color-text-secondary)">폴더 우클릭 → "새 폴더" → 이름 입력</p>
+          </div>
+          <div class="comparison-card vibe">
+            <h3>CLI (터미널 방식)</h3>
+            <p style="font-size:18px;color:var(--color-text-secondary)"><code>mkdir my-folder</code> 한 줄이면 끝!</p>
+            <p style="font-size:16px;color:var(--color-text-muted)">AI가 터미널 명령을 직접 실행할 수 있어요</p>
+          </div>
+        </div>
+
+        <h3>첫 업무 지시 (대화 예시)</h3>
+        <blockquote>
+          <strong>나:</strong> "현재 폴더에 있는 파일 목록 좀 보여줘"<br>
+          <strong>Claude:</strong> <code>ls</code> 명령어를 자동 실행하고 결과를 보여줘요
+        </blockquote>
+        <blockquote>
+          <strong>나:</strong> "여기에 hello.txt 파일 만들어줘. 내용은 '안녕하세요'로"<br>
+          <strong>Claude:</strong> 파일을 직접 생성해요. 복붙할 필요 없어요!
+        </blockquote>
+        <p><strong>명령어를 몰라도 AI가 알아서 처리해요.</strong> 터미널 명령어를 외울 필요 없어요. 한국어로 말하면 AI가 알아서 실행해요.</p>
+        <p>비유: 카카오톡(사람↔사람) vs 터미널(사람↔컴퓨터)</p>
+
+        <h3>VS Code 설치 + 세팅</h3>
+        <p><strong>VS Code (Visual Studio Code)</strong> = 전 세계 개발자의 70% 이상이 사용하는 전문가용 작업 환경이에요.</p>
+        <p><strong>설치 방법:</strong></p>
+        <ol>
+          <li><a href="https://code.visualstudio.com" target="_blank">VS Code 공식 홈페이지</a> 접속</li>
+          <li>파란색 <strong>Download</strong> 버튼 클릭</li>
+          <li>설치 파일 실행 → "다음, 다음, 완료"</li>
+        </ol>
+        <p><strong>주요 기능 3가지:</strong></p>
+        <ul>
+          <li><strong>자동 완성:</strong> <code>cl</code>만 쳐도 <code>console.log</code>를 추천해줘요</li>
+          <li><strong>에러 표시:</strong> 문제 있는 코드 아래 빨간 줄이 나와요</li>
+          <li><strong>터미널 내장:</strong> 별도 창 없이 VS Code 안에서 터미널을 쓸 수 있어요</li>
+        </ul>
+        <p><strong>필수 확장 프로그램:</strong> Korean Language Pack</p>
+        <ol>
+          <li>VS Code 왼쪽 사이드바에서 확장(Extensions) 아이콘 클릭</li>
+          <li>검색창에 <code>Korean</code> 입력</li>
+          <li>"Korean Language Pack for Visual Studio Code" → <strong>Install</strong> → <strong>Restart</strong></li>
+        </ol>
+        <pre>code .    # "현재 폴더를 VS Code로 열어"</pre>
+        <p><code>code</code>는 "VS Code를 실행해", <code>.</code>(점)은 "현재 폴더를 열어"라는 뜻이에요.</p>
+        <h3>실습: 파일 만들고 저장하기</h3>
+        <ol>
+          <li><code>code .</code> 명령어로 VS Code 열기</li>
+          <li>탐색기 빈 공간 우클릭 → "새 파일"</li>
+          <li>파일명 입력: <code>hello.txt</code></li>
+          <li>내용 입력: "안녕하세요, 첫 파일이에요!"</li>
+          <li><code>Ctrl+S</code>로 저장</li>
+        </ol>
+        <div class="insight-box">
+          <p><strong>팁:</strong> 파일명 옆에 동그라미(●)가 보이면 = 아직 저장 안 된 거예요. <code>Ctrl+S</code> 누르면 사라져요.</p>
+        </div>
+        <div class="insight-box">
+          <p><strong>터미널 여는 법:</strong> VS Code 안에서 터미널이 안 보일 때 → 상단 메뉴 <code>Terminal</code> → <code>New Terminal</code> 또는 단축키 <code>Ctrl + `</code> (백틱). 터미널은 VS Code 아래쪽에 나타나요.</p>
+        </div>
+
+        <h3>Git 3단계 주문</h3>
+        <p>첫 시작: <code>git init</code> — 이 폴더에서 세이브 기능을 켜는 것!</p>
+        <div class="insight-box">
+          <p><code>Initialized empty Git repository</code>가 뜨면 성공이에요!</p>
+        </div>
+        <pre>git add .           # 담고 (점 . = "모든 파일 다 담아!")
+git commit -m "메시지"  # 찍고 (세이브 포인트 찍기)
+git push             # 밀고 (클라우드에 올리기)</pre>
+        <div class="insight-box">
+          <p><strong>RPG 비유:</strong> "보스를 잡기 전에 저장! 로그인 기능 건드릴 건데, 망치면 귀찮으니까 여기서 일단 저장!" → <code>git commit -m "로그인 건드리기 전 세이브"</code> → 마음의 평화. 망쳤으면? 세이브 포인트로 돌아가면 돼요.</p>
+        </div>
+        <p><strong>이것만 알면 코드는 절대 날아가지 않아요.</strong></p>
+
+        <h3>GitHub 연결하기</h3>
+        <p><strong>GitHub = 클라우드 세이브.</strong> 내 컴퓨터가 고장나도 코드가 안전해요. GitHub에서 저장소를 만든 후, 이 3줄만 터미널에 붙여넣으면 연결 끝!</p>
+        <ol>
+          <li>GitHub.com 회원가입</li>
+          <li><code>+</code> → <code>New repository</code> → 이름 짓기 → <code>Create repository</code></li>
+          <li>아래 3줄을 터미널에 붙여넣기:</li>
+        </ol>
+        <pre>git remote add origin https://github.com/내아이디/내저장소.git
+git branch -M main
+git push -u origin main</pre>
+        <p>이제 <code>git push</code> 한 번이면 내 코드가 클라우드에 저장돼요.</p>
+
+        <h3>NPM + .env</h3>
+        <p><strong>NPM(Node Package Manager)</strong>은 프로젝트에 필요한 라이브러리를 관리하는 도구예요. "내 컴퓨터에서만 작동 안 함" 문제를 해결해줘요.</p>
+        <p><strong>package.json = 레시피 파일.</strong> 프로젝트에 필요한 재료(라이브러리) 목록이에요.</p>
+        <pre>{
+  "name": "my-project",
+  "dependencies": {
+    "rss-parser": "^3.13.0",
+    "axios": "^1.13.0"
+  }
+}</pre>
+        <p><code>npm install</code>을 실행하면 package.json에 적힌 모든 라이브러리가 <strong>node_modules</strong> 폴더에 자동으로 설치돼요. 레시피만 있으면 누구든 같은 환경을 만들 수 있어요!</p>
+        <p><strong>.gitignore 필수 2가지:</strong></p>
+        <pre>node_modules/   # 재료 보관함 (용량 크고, npm install로 재설치 가능)
+.env            # 비밀번호 금고 (API 키 유출 위험!)</pre>
+        <div class="insight-box">
+          <p><strong>.env 사용법:</strong> <code>API_KEY=abcdefg12345</code> 형식으로 저장하고, 코드에서는 <code>process.env.API_KEY</code>로 가져와요. 비밀번호를 코드에 직접 쓰면 GitHub에 올릴 때 전 세계에 공개되는 거예요!</p>
+        </div>
+
+        <h2>4대 도구 종합</h2>
+        <table>
+          <tr>
+            <th>도구</th>
+            <th>비유</th>
+            <th>역할</th>
+            <th>핵심 명령어</th>
+          </tr>
+          <tr>
+            <td><strong>Claude Code</strong></td>
+            <td>손발 달린 신입</td>
+            <td>AI 코딩 실행</td>
+            <td><code>claude</code></td>
+          </tr>
+          <tr>
+            <td><strong>VS Code</strong></td>
+            <td>전문 주방</td>
+            <td>코드 편집 환경</td>
+            <td><code>code .</code></td>
+          </tr>
+          <tr>
+            <td><strong>Git</strong></td>
+            <td>게임 세이브</td>
+            <td>버전 관리</td>
+            <td><code>git init → add → commit → push</code></td>
+          </tr>
+          <tr>
+            <td><strong>NPM</strong></td>
+            <td>레시피북</td>
+            <td>의존성 관리</td>
+            <td><code>npm install</code></td>
+          </tr>
+        </table>
+
+      </section>
+
+      <!-- ==================== 섹션 4: 실전 — 뉴스 봇 만들기 ==================== -->
+      <section id="hands-on" class="content-section">
+        <h1>실전: 뉴스 요약 슬랙 봇 만들기</h1>
+
+        <div class="key-message">
+          <span class="key-icon">🎯</span>
+          <p class="key-text">AI와 대화하면서, 진짜 동작하는 자동화 비서를 직접 만들어봐요.</p>
+        </div>
+
+        <blockquote>
+          "매일 아침 뉴스 검색하는 데 30분... 1년이면 180시간이에요.<br>
+          한 달치 업무 시간을 단순 반복에 버리고 있는 셈이에요."<br><br>
+          지금부터 이 30분을 0분으로 만드는 비서를 만들어볼 거예요.
+        </blockquote>
+
+        <h2>자동화할 수 있는 일 vs 없는 일</h2>
+        <p>모든 일을 자동화할 수 있는 건 아니에요. 자동화가 잘 되는 일에는 <strong>3가지 공통점</strong>이 있어요.</p>
+        <div class="ai-grid">
+          <div class="ai-card highlight" style="min-width:180px;padding:24px">
+            <span style="font-size:36px">🔁</span>
+            <span class="ai-name" style="font-size:18px;margin-top:8px">반복적</span>
+            <span style="font-size:14px;color:var(--color-text-muted);margin-top:4px">매일/매주 똑같이 하는 일</span>
+          </div>
+          <div class="ai-card highlight" style="min-width:180px;padding:24px">
+            <span style="font-size:36px">📏</span>
+            <span class="ai-name" style="font-size:18px;margin-top:8px">규칙적</span>
+            <span style="font-size:14px;color:var(--color-text-muted);margin-top:4px">"A면 B한다"가 명확</span>
+          </div>
+          <div class="ai-card highlight" style="min-width:180px;padding:24px">
+            <span style="font-size:36px">📊</span>
+            <span class="ai-name" style="font-size:18px;margin-top:8px">데이터 처리</span>
+            <span style="font-size:14px;color:var(--color-text-muted);margin-top:4px">텍스트, 숫자, 파일</span>
+          </div>
+        </div>
+
+        <table>
+          <tr>
+            <th>자동화 가능</th>
+            <th>자동화 불가능</th>
+          </tr>
+          <tr>
+            <td>환율 수집, 뉴스 키워드 모으기</td>
+            <td>"이 뉴스가 중요한가?" (판단)</td>
+          </tr>
+          <tr>
+            <td>정해진 보고서 발송</td>
+            <td>"트렌드에 맞나?" (감각)</td>
+          </tr>
+          <tr>
+            <td>특정 키워드 기사 모으기</td>
+            <td>"거래처 담당자 기분이 안 좋아 보이네" (눈치)</td>
+          </tr>
+        </table>
+        <p>"매일 아침 AI 뉴스 모아서 슬랙으로 받기" — <strong>반복적이고, 규칙적이고, 데이터 처리</strong>예요. 자동화하기 딱 좋은 일이에요!</p>
+
+        <h2>오늘 만들 것: 전체 구조</h2>
+        <p>완성하면 이런 흐름으로 동작해요. 먼저 큰 그림을 보고, 하나씩 만들어볼게요.</p>
+        <div class="flow-diagram">
+          <div class="flow-node">
+            <span class="flow-emoji">⏰</span>
+            <span class="flow-label">Cron</span>
+            <span class="flow-desc">매일 09:00<br>깨워줘!</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">📰</span>
+            <span class="flow-label">RSS</span>
+            <span class="flow-desc">뉴스 수집</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">🤖</span>
+            <span class="flow-label">AI 요약</span>
+            <span class="flow-desc">3줄 요약</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">🔔</span>
+            <span class="flow-label">Webhook</span>
+            <span class="flow-desc">슬랙 전송</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">💬</span>
+            <span class="flow-label">Slack</span>
+            <span class="flow-desc">폰에서 확인!</span>
+          </div>
+        </div>
+        <div class="section-image-wrap">
+          <img src="images/25-news-bot-structure.png" alt="뉴스 요약 봇 전체 구조" class="section-image">
+          <p class="section-image-caption">Cron(알람) → RSS(수집) → AI(요약) → Webhook(발송) → Slack(확인)</p>
+        </div>
+        <p>낯선 단어가 보여도 괜찮아요. 각 단계를 만들면서 자연스럽게 알게 될 거예요.</p>
+
+        <h2>AI와 기획부터 시작하기</h2>
+        <p>바이브 코딩의 첫 단계는 코드가 아니에요. <strong>AI와의 기획 대화</strong>예요. 어떻게 대화하는지 보여드릴게요.</p>
+
+        <h3>1단계: 큰 그림 전달하기</h3>
+        <blockquote>
+          <strong>나:</strong> "뉴스 검색 자동화하고 싶어. 매일 아침 9시에 'AI' 뉴스 모아서 슬랙으로 받고 싶어."
+        </blockquote>
+        <div class="insight-box">
+          <p><strong>프롬프트 포인트:</strong> "뭘 하고 싶은지"(뉴스 자동화) + "언제"(매일 9시) + "어디로"(슬랙) — 구체적인 3요소를 한 문장에 담았어요.</p>
+        </div>
+        <blockquote>
+          <strong>AI:</strong> "GitHub Actions Cron(무료) + 구글 뉴스 RSS + 슬랙 Webhook 조합을 추천해요!"
+        </blockquote>
+
+        <h3>2단계: 모르는 건 바로 물어보기</h3>
+        <blockquote>
+          <strong>나:</strong> "GitHub Actions? RSS? Webhook? 그건 뭐야? 하나씩 쉽게 설명해줘."
+        </blockquote>
+        <div class="insight-box">
+          <p><strong>프롬프트 포인트:</strong> 모르는 용어가 나왔을 때, 넘어가지 말고 바로 물어보세요. "쉽게 설명해줘"를 붙이면 비유로 설명해줘요.</p>
+        </div>
+        <blockquote>
+          <strong>AI:</strong> 쉽게 말하면 이래요:<br>
+          • <strong>Cron</strong> = 알람 시계. "매일 9시에 이 코드 실행해!"<br>
+          • <strong>RSS</strong> = 전단지. 뉴스 사이트가 공식으로 나눠주는 기사 목록이에요.<br>
+          • <strong>Webhook</strong> = 초인종. "뉴스 왔어!" 하고 슬랙 문을 두드리는 거예요.
+        </blockquote>
+
+        <h3>3단계: 디테일 잡기</h3>
+        <blockquote>
+          <strong>나:</strong> "제목만 보내면 안 읽을 것 같아. 3줄 요약도 붙여줘."
+        </blockquote>
+        <blockquote>
+          <strong>AI:</strong> "좋아요! 뉴스 수집 → AI 요약 → 슬랙 전송 순서로 만들게요."
+        </blockquote>
+        <blockquote>
+          <strong>나:</strong> "좋아. 그럼 1단계부터 시작하자. 먼저 뉴스 가져오는 것부터 만들어줘."
+        </blockquote>
+        <div class="insight-box">
+          <p><strong>프롬프트 포인트:</strong> 전체를 한번에 시키지 않고 <strong>"1단계부터"</strong>라고 범위를 좁혔어요. 한 번에 하나씩 만들어야 문제가 생겼을 때 어디가 잘못됐는지 찾기 쉬워요.</p>
+        </div>
+
+        <p>기획이 끝났어요! 이제 실제로 만들어볼게요.</p>
+
+        <!-- ===== STEP 1 ===== -->
+        <div class="step-indicator">
+          <span class="step-number">1</span>
+          데이터 수집 — RSS로 뉴스 가져오기
+        </div>
+
+        <h3>크롤링 vs RSS</h3>
+        <p>뉴스를 가져오는 방법은 크게 두 가지예요.</p>
+        <table>
+          <tr>
+            <th>크롤링 = "몰래 가져오기"</th>
+            <th>RSS = "공식 전단지"</th>
+          </tr>
+          <tr>
+            <td>웹페이지를 직접 긁어옴</td>
+            <td>사이트가 공식으로 제공하는 피드</td>
+          </tr>
+          <tr>
+            <td>법적 문제 가능성 있음</td>
+            <td>안전하고 합법적</td>
+          </tr>
+        </table>
+        <p><strong>우리는 RSS를 써요.</strong> 구글 뉴스가 공식으로 제공하는 전단지를 가져오는 거예요.</p>
+
+        <div class="insight-box">
+          <p><strong>원석 vs 보석:</strong> 인터넷의 데이터는 정제되지 않은 원석(Raw Data)이에요. 이 원석에서 필요한 보석(제목, 링크)만 골라내는 작업을 <strong>파싱(Parsing)</strong>이라고 해요. 생선에서 가시를 발라내고 살코기만 남기는 것과 같아요.</p>
+        </div>
+
+        <div class="section-image-wrap">
+          <img src="images/26-rss-parsing.png" alt="데이터 파싱 프로세스" class="section-image">
+          <p class="section-image-caption">원석(RSS) → 파싱(가시 발라내기) → 보석(제목, 링크, 날짜)</p>
+        </div>
+
+        <h3>프로젝트 세팅</h3>
+        <pre>mkdir my-news-bot &amp;&amp; cd my-news-bot
+npm init -y
+npm install rss-parser</pre>
+        <div class="insight-box">
+          <p><strong>Node.js란?</strong> 브라우저 없이 JavaScript를 실행할 수 있게 해주는 환경이에요. <code>npm install</code>은 섹션 3에서 배운 "레시피북"이에요 — 필요한 재료(rss-parser)를 설치하는 거예요.</p>
+        </div>
+
+        <h3>AI에게 코드 요청하기</h3>
+        <pre>"rss-parser 라이브러리로 구글 뉴스 RSS에서 'AI' 키워드 최신 기사 3개의 제목과 링크를 출력하는 index.js 파일을 만들어줘. 한글 주석 달아줘."</pre>
+        <div class="insight-box">
+          <p><strong>프롬프트 분석 — 왜 이렇게 쓸까요?</strong><br>
+          • <strong>"rss-parser 라이브러리로"</strong> → 어떤 도구를 쓸지 지정 (AI가 다른 걸 쓰는 걸 방지)<br>
+          • <strong>"최신 기사 3개"</strong> → 수량을 명시 (안 하면 100개를 가져올 수도 있어요)<br>
+          • <strong>"제목과 링크를"</strong> → 필요한 데이터를 구체적으로 지정<br>
+          • <strong>"index.js 파일을 만들어줘"</strong> → 파일명까지 지정하면 헷갈릴 일이 없어요<br>
+          • <strong>"한글 주석"</strong> → 나중에 코드를 봤을 때 이해하기 쉽게</p>
+        </div>
+
+        <h3>Google News RSS URL</h3>
+        <pre>https://news.google.com/rss/search?q=인공지능&amp;hl=ko&amp;gl=KR&amp;ceid=KR:ko</pre>
+        <p><code>q=검색어</code> 부분을 바꾸면 원하는 키워드의 뉴스를 가져올 수 있어요. <strong>파싱(Parsing)</strong>이란 이 RSS 데이터에서 제목, 링크 같은 "보석"만 골라내는 거예요.</p>
+
+        <h3>AI가 만들어준 코드 (핵심 부분)</h3>
+        <pre>const Parser = require('rss-parser');
+const parser = new Parser();
+
+// 구글 뉴스에서 'AI' 관련 기사 가져오기
+const feed = await parser.parseURL('RSS_URL');
+<span class="highlight-line">feed.items.slice(0, 3).forEach(item =&gt; {</span>
+  console.log(`[제목] ${item.title}`);
+  console.log(`[링크] ${item.link}`);
+});</pre>
+        <p>코드를 다 이해할 필요는 없어요. 핵심만 보면: <code>slice(0, 3)</code>이 "3개만 가져와"이고, <code>item.title</code>이 "제목을 꺼내줘"예요.</p>
+
+        <h3>실행해보기</h3>
+        <pre>node index.js</pre>
+        <p>→ 터미널에 뉴스 제목 3개가 출력되면 <strong>STEP 1 성공!</strong></p>
+
+        <div class="key-message">
+          <span class="key-icon">✅</span>
+          <p class="key-text">축하해요! 뉴스를 자동으로 수집하는 데 성공했어요. 이제 이걸 슬랙으로 보내봐요.</p>
+        </div>
+
+        <!-- ===== Bridge 1→2 ===== -->
+        <blockquote>
+          진정한 자동화란, 내가 신경 쓰지 않아도 <strong>내 눈앞에 배달되는 것</strong>이에요.
+        </blockquote>
+        <p>지금은 터미널에서만 볼 수 있어요. 매번 컴퓨터 앞에 앉아서 <code>node index.js</code>를 치는 건 불편하죠?<br>
+        <strong>슬랙으로 보내면 폰에서 바로 확인할 수 있어요.</strong> 이때 쓰는 게 아까 배운 <strong>Webhook(초인종)</strong>이에요.</p>
+
+        <!-- ===== STEP 2 ===== -->
+        <div class="step-indicator">
+          <span class="step-number">2</span>
+          슬랙 전송 — Webhook으로 메시지 보내기
+        </div>
+
+        <h3>Webhook = 초인종, 다시 한번</h3>
+        <p>슬랙에 "비밀 우체통 주소"를 하나 만들어요. 그 주소로 데이터를 보내면 슬랙 채널에 메시지가 뜨는 거예요.</p>
+
+        <h3>슬랙 앱 만들기 (6단계)</h3>
+        <ol>
+          <li>Slack API 사이트 접속 (api.slack.com)</li>
+          <li>"Create New App" → "From scratch" 선택</li>
+          <li>앱 이름 지정 (예: Morning News Bot) + 워크스페이스 선택</li>
+          <li>"Incoming Webhooks" 메뉴 클릭</li>
+          <li>"Activate Incoming Webhooks" 스위치 켜기</li>
+          <li>"Add New Webhook to Workspace" → 채널 선택 → URL 복사</li>
+        </ol>
+        <div class="insight-box">
+          <p><strong>주의:</strong> 이 Webhook URL이 유출되면 아무나 내 채널에 메시지를 보낼 수 있어요! 절대 코드에 직접 넣지 말고, 섹션 3에서 배운 <strong>.env 파일(비밀번호 금고)</strong>에 보관하세요.</p>
+        </div>
+
+        <h3>추가 설치</h3>
+        <pre>npm install axios dotenv</pre>
+
+        <h3>AI에게 코드 요청하기</h3>
+        <pre>"기존 index.js에 슬랙 전송 기능을 추가해줘.
+- axios로 슬랙 Webhook URL에 POST 요청을 보내는 sendToSlack 함수를 만들어줘.
+- Webhook 주소는 .env 파일의 SLACK_WEBHOOK_URL에서 가져와.
+- 뉴스 제목 3개를 하나의 메시지로 합쳐서 보내줘."</pre>
+        <div class="insight-box">
+          <p><strong>프롬프트 분석 — 왜 이렇게 쓸까요?</strong><br>
+          • <strong>"기존 index.js에 추가해줘"</strong> → 새 파일을 만들지 말고 기존 코드에 합치라는 뜻<br>
+          • <strong>"sendToSlack 함수를 만들어줘"</strong> → 함수 이름까지 지정하면 코드가 깔끔해요<br>
+          • <strong>".env 파일에서 가져와"</strong> → 보안 패턴을 명시적으로 요청<br>
+          • <strong>"하나의 메시지로 합쳐서"</strong> → 안 하면 3개를 따로따로 보낼 수도 있어요</p>
+        </div>
+
+        <div class="section-image-wrap">
+          <img src="images/27-webhook-flow.png" alt="웹훅 전달 흐름" class="section-image">
+          <p class="section-image-caption">Node.js가 JSON 편지를 Webhook URL(비밀 통로)로 보내면, Slack이 받아요</p>
+        </div>
+
+        <h3>POST 방식이란?</h3>
+        <p>HTTP 요청에는 두 가지가 있어요. <strong>GET</strong> = "정보 줘" (가져오기), <strong>POST</strong> = "이거 받아" (보내기). 슬랙에 메시지를 <em>보내는</em> 거니까 POST를 써요.</p>
+
+        <h3>핵심 코드: sendToSlack 함수</h3>
+        <pre>async function sendToSlack(message) {
+  // .env에서 비밀 주소 가져오기
+  const url = process.env.SLACK_WEBHOOK_URL;
+  try {
+    // 슬랙으로 메시지 쏘기 (POST 방식)
+    <span class="highlight-line">await axios.post(url, { text: message });</span>
+    console.log('슬랙 전송 완료!');
+  } catch (error) {
+    console.error('배달 실패:', error);
+  }
+}</pre>
+        <p>이 코드에서 가장 중요한 한 줄: <code>axios.post(url, { text: message })</code> — "이 주소로 이 메시지를 보내줘"라는 뜻이에요.</p>
+
+        <h3>실행해보기</h3>
+        <pre>node index.js</pre>
+        <p>→ 슬랙 채널에 뉴스 요약 메시지가 도착하면 <strong>STEP 2 성공!</strong></p>
+
+        <div class="key-message">
+          <span class="key-icon">✅</span>
+          <p class="key-text">뉴스를 모아서 슬랙으로 보내는 것까지 됐어요! 하지만 아직 한 가지 남았어요...</p>
+        </div>
+
+        <!-- ===== Bridge 2→3 ===== -->
+        <p>지금은 <code>node index.js</code>를 직접 실행해야 뉴스가 보내져요. 매일 아침 일어나서 터미널을 열고 명령어를 치는 건... 자동화가 아니죠?</p>
+        <p><strong>진짜 자동화란, 내가 아무것도 안 해도 알아서 실행되는 거예요.</strong> 이때 쓰는 게 아까 배운 <strong>Cron(알람 시계)</strong>이에요. 그런데 내 컴퓨터가 꺼져 있으면? GitHub가 대신 실행해줘요!</p>
+
+        <!-- ===== STEP 3 ===== -->
+        <div class="step-indicator">
+          <span class="step-number">3</span>
+          24/7 자동화 — GitHub Actions로 매일 자동 실행
+        </div>
+
+        <p><strong>GitHub Actions</strong> = "깃허브가 빌려주는 무료 컴퓨터"예요. 매달 무료 2,000분까지 사용할 수 있어요.</p>
+        <div class="insight-box">
+          <p><strong>서버리스(Serverless) 자동화란?</strong> 원래 자동화하려면 24시간 켜져 있는 서버가 필요해요. 근데 GitHub Actions가 대신 컴퓨터를 빌려주니까, 우리는 서버를 신경 쓸 필요 없어요.</p>
+        </div>
+
+        <h3>AI에게 워크플로우 요청하기</h3>
+        <pre>"GitHub Actions로 매일 한국 시간 아침 9시에 index.js를 자동 실행하는 워크플로우 파일을 만들어줘.
+- .github/workflows/daily.yml 경로에 만들어줘.
+- Node.js 18 버전을 사용해.
+- npm install 후 node index.js를 실행해.
+- SLACK_WEBHOOK_URL은 GitHub Secrets에서 가져와."</pre>
+        <div class="insight-box">
+          <p><strong>프롬프트 분석 — 왜 이렇게 쓸까요?</strong><br>
+          • <strong>"한국 시간 아침 9시"</strong> → AI가 알아서 UTC로 변환해줘요 (한국 9시 = UTC 0시)<br>
+          • <strong>".github/workflows/daily.yml 경로"</strong> → 파일 위치까지 지정하면 실수가 줄어요<br>
+          • <strong>"Node.js 18 버전"</strong> → 버전을 명시해야 호환성 문제가 없어요<br>
+          • <strong>"GitHub Secrets에서 가져와"</strong> → .env 파일은 GitHub에 안 올라가니까, Secrets를 써야 해요</p>
+        </div>
+
+        <h3>시간 주의! (UTC vs KST)</h3>
+        <p>GitHub 컴퓨터는 영국 시간(UTC)을 써요. 한국(KST)은 +9시간이에요. AI에게 "한국 시간"이라고 말하면 알아서 변환해주지만, 알아두면 좋아요.</p>
+        <table>
+          <tr>
+            <th>한국 시간 (KST)</th>
+            <th>UTC</th>
+            <th>Cron 설정</th>
+          </tr>
+          <tr>
+            <td>오전 9시</td>
+            <td>0시</td>
+            <td><code>cron: '0 0 * * *'</code></td>
+          </tr>
+          <tr>
+            <td>오후 2시</td>
+            <td>5시</td>
+            <td><code>cron: '0 5 * * *'</code></td>
+          </tr>
+          <tr>
+            <td>오후 6시</td>
+            <td>9시</td>
+            <td><code>cron: '0 9 * * *'</code></td>
+          </tr>
+        </table>
+
+        <h3>비밀값 등록하기</h3>
+        <p>.env 파일은 GitHub에 올라가지 않으니까, Webhook URL을 GitHub Secrets에 따로 등록해야 해요.</p>
+        <ol>
+          <li>GitHub 저장소의 <strong>Settings</strong> 클릭</li>
+          <li><strong>Secrets and variables</strong> → <strong>Actions</strong> 클릭</li>
+          <li><strong>New repository secret</strong> 버튼 클릭</li>
+          <li>Name에 <code>SLACK_WEBHOOK_URL</code> 입력</li>
+          <li>Secret에 실제 주소 붙여넣기 → <strong>Add secret</strong></li>
+        </ol>
+
+        <h3>배포하기</h3>
+        <pre>git add .
+git commit -m "뉴스 봇 완성"
+git push</pre>
+        <p>→ GitHub 저장소의 <strong>Actions</strong> 탭에서 초록색 체크가 보이면 <strong>STEP 3 성공!</strong></p>
+
+        <div class="section-image-wrap">
+          <img src="images/28-github-actions.png" alt="GitHub Actions 클라우드 구조" class="section-image">
+          <p class="section-image-caption">Cron(시간 트리거) → Runner(가상 컴퓨터) → Secrets(비밀 저장소) → 실행(Node.js)</p>
+        </div>
+
+        <!-- ===== 완성 ===== -->
+        <h2>완성! 나만의 자동화 비서</h2>
+
+        <div class="section-image-wrap">
+          <img src="images/최종 아웃풋.png" alt="Slack 뉴스봇 실행 결과" class="section-image">
+          <p class="section-image-caption">실제 Slack에서 받아보는 AI 뉴스 요약 봇</p>
+        </div>
+        <p style="font-size:20px;color:var(--color-text-secondary)">이제 컴퓨터가 꺼져 있어도, <strong>여행을 가도, 잠을 자도</strong><br>매일 아침 9시에 자동으로 실행돼요.</p>
+        <div class="flow-diagram">
+          <div class="flow-node">
+            <span class="flow-emoji">😴</span>
+            <span class="flow-label">내 컴퓨터</span>
+            <span class="flow-desc">꺼져 있어도 OK</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">🖥️</span>
+            <span class="flow-label">GitHub</span>
+            <span class="flow-desc">대신 실행</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">📰</span>
+            <span class="flow-label">뉴스 수집</span>
+            <span class="flow-desc">매일 아침 9시</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">🤖</span>
+            <span class="flow-label">AI 요약</span>
+            <span class="flow-desc">3줄 요약</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">💬</span>
+            <span class="flow-label">슬랙 배달</span>
+            <span class="flow-desc">폰에서 확인!</span>
+          </div>
+        </div>
+
+        <h2>돌아보기: 오늘 배운 기술들</h2>
+        <table>
+          <tr>
+            <th>기술</th>
+            <th>비유</th>
+            <th>우리가 쓴 곳</th>
+          </tr>
+          <tr>
+            <td><strong>RSS</strong></td>
+            <td>공식 전단지</td>
+            <td>구글 뉴스에서 기사 가져오기</td>
+          </tr>
+          <tr>
+            <td><strong>파싱</strong></td>
+            <td>보석 추출</td>
+            <td>RSS에서 제목과 링크만 꺼내기</td>
+          </tr>
+          <tr>
+            <td><strong>Webhook</strong></td>
+            <td>초인종</td>
+            <td>슬랙에 메시지 보내기</td>
+          </tr>
+          <tr>
+            <td><strong>Cron</strong></td>
+            <td>알람 시계</td>
+            <td>매일 9시에 자동 실행</td>
+          </tr>
+          <tr>
+            <td><strong>GitHub Actions</strong></td>
+            <td>무료 대리인</td>
+            <td>내 컴퓨터 대신 실행</td>
+          </tr>
+        </table>
+
+      </section>
+
+      <!-- ==================== 섹션 ~: 정리 ==================== -->
+      <section id="summary" class="content-section">
+        <h1>정리: 오늘부터 시작하기</h1>
+
+        <div class="key-message">
+          <span class="key-icon">🎯</span>
+          <p class="key-text">바이브 코딩은 마법이 아니에요. AI와 대화하면서, 확인하면서, 함께 만들어가는 거예요.</p>
+        </div>
+
+        <h2>오늘 배운 전체 흐름</h2>
+        <table>
+          <tr>
+            <th>섹션</th>
+            <th>한 줄 요약</th>
+          </tr>
+          <tr>
+            <td><strong>개요</strong></td>
+            <td>AI가 코드 조각이 아니라 프로젝트 전체를 다루는 시대가 왔어요</td>
+          </tr>
+          <tr>
+            <td><strong>바이브 코딩</strong></td>
+            <td>코드 대신 명확한 의도로 AI를 지휘하는 것이에요</td>
+          </tr>
+          <tr>
+            <td><strong>마인드셋</strong></td>
+            <td>"만들어줘"가 아니라 "같이 정리해보자"가 핵심이에요</td>
+          </tr>
+          <tr>
+            <td><strong>도구 세팅</strong></td>
+            <td>Claude Code + VS Code + Git + NPM = 완전한 작업 환경</td>
+          </tr>
+          <tr>
+            <td><strong>실전</strong></td>
+            <td>AI와 기획 → 뉴스 수집(RSS) → 슬랙 전송(Webhook) → 자동화(Cron) 완성!</td>
+          </tr>
+        </table>
+
+        <h2>오늘 기억할 5가지</h2>
+        <div class="growth-path">
+          <div class="growth-step" data-step="1">
+            <div class="step-title">바이브 코딩 = 코드 대신 명확한 지침으로 AI를 지휘하는 것</div>
+          </div>
+          <div class="growth-step" data-step="2">
+            <div class="step-title">코드를 "짜는 것"은 몰라도 되지만, "보는 것"은 배워야 해요</div>
+          </div>
+          <div class="growth-step" data-step="3">
+            <div class="step-title">AI는 유능한 신입사원 — 좋은 상사가 되세요</div>
+          </div>
+          <div class="growth-step" data-step="4">
+            <div class="step-title">도구 4가지: Claude Code, VS Code, Git, NPM</div>
+          </div>
+          <div class="growth-step" data-step="5">
+            <div class="step-title">"대화 → 확인 → 피드백 → 반복"이 바이브 코딩의 핵심 루프</div>
+          </div>
+        </div>
+
+        <h2>다음 단계 로드맵</h2>
+        <table>
+          <tr>
+            <th>시기</th>
+            <th>할 일</th>
+            <th>난이도</th>
+          </tr>
+          <tr>
+            <td><strong>오늘</strong></td>
+            <td>Claude Code 설치 + 첫 대화</td>
+            <td><span class="badge-easy">쉬움</span></td>
+          </tr>
+          <tr>
+            <td><strong>이번 주</strong></td>
+            <td>VS Code + Git 세팅 + "할일 앱" 만들어보기</td>
+            <td><span class="badge-easy">쉬움</span></td>
+          </tr>
+          <tr>
+            <td><strong>이번 달</strong></td>
+            <td>뉴스 봇 직접 구축 + 슬랙 연동</td>
+            <td><span class="badge-medium">보통</span></td>
+          </tr>
+          <tr>
+            <td><strong>다음 달</strong></td>
+            <td>나만의 자동화 프로젝트 기획 + 배포</td>
+            <td><span class="badge-challenge">도전</span></td>
+          </tr>
+        </table>
+
+        <blockquote>
+          "바이브 코딩은 마법이 아니에요.<br>
+          AI와 대화하면서, 확인하면서, 함께 만들어가는 거예요."
+        </blockquote>
+
+        <p style="text-align:center;margin-top:48px;font-size:18px;color:var(--color-text-muted)">
+          참고: <a href="https://max5.ai" target="_blank">max5.ai</a> 바이브 코딩 시리즈 (전체 35편)
+        </p>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Modal Overlay -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-emoji" id="modal-emoji"></div>
+      <h2 class="modal-title" id="modal-title"></h2>
+      <p class="modal-creator" id="modal-creator"></p>
+      <p class="modal-desc" id="modal-desc"></p>
+      <div class="modal-meta">
+        <span id="modal-tool"></span>
+        <span id="modal-result"></span>
+      </div>
+      <a href="#" target="_blank" class="modal-link" id="modal-link">서비스 바로가기 →</a>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
