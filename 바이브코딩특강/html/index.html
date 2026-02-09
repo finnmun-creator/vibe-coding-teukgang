@@ -68,6 +68,15 @@
 
       <!-- ==================== 섹션 0: 개요 ==================== -->
       <section id="overview" class="content-section active">
+        <div class="insight-box">
+          <p><strong>이 문서를 다 보고 나면, 여러분은:</strong></p>
+          <ul>
+            <li>바이브 코딩이 뭔지 자신있게 설명할 수 있어요</li>
+            <li>Claude Code, VS Code, Git을 직접 설치하고 사용할 수 있어요</li>
+            <li>AI와 대화해서 <strong>뉴스 요약 슬랙 봇</strong>을 처음부터 끝까지 만들 수 있어요</li>
+          </ul>
+        </div>
+
         <div class="key-message">
           <span class="key-icon">🎯</span>
           <p class="key-text">코드를 짜는 시대에서, AI를 지휘하는 시대로 바뀌었어요.</p>
@@ -134,6 +143,10 @@
           <p>그래서 바이브 코딩이 필요해요.</p>
         </div>
 
+        <div class="insight-box">
+          <p><strong>핵심 인사이트:</strong> "우리 서비스는 7일 이내만 환불 가능한데, AI는 이걸 몰라요." — AI 시대의 경쟁력은 코딩 실력이 아니라 <strong>업무와 비즈니스에 대한 이해도</strong>예요. 여러분이 가진 도메인 지식이 곧 무기예요.</p>
+        </div>
+
         <h2>오늘의 흐름</h2>
         <div class="flow-diagram">
           <div class="flow-node">
@@ -166,11 +179,15 @@
             <span class="flow-desc">다음 단계</span>
           </div>
         </div>
+
+        <p><em>그럼 바이브 코딩이 정확히 뭔지, 그리고 뭘 할 수 있는지 알아볼게요.</em></p>
       </section>
 
       <!-- ==================== 섹션 1: 바이브 코딩이란 ==================== -->
       <section id="what-is" class="content-section">
         <h1>바이브 코딩이란</h1>
+
+        <p class="section-recap"><em>개요에서 AI 코딩 시대가 왔다는 걸 봤어요. 그런데 정확히 "바이브 코딩"이 뭘까요?</em></p>
 
         <div class="key-message">
           <span class="key-icon">🎯</span>
@@ -424,11 +441,35 @@
           <p class="section-image-caption">여러분은 방향(Direction)을, AI는 코드(Code)를 담당해요</p>
         </div>
 
+        <h3>셀프 체크</h3>
+        <table>
+          <tr>
+            <th>질문</th>
+            <th>정답</th>
+          </tr>
+          <tr>
+            <td>바이브 코딩에서 사람의 역할은?</td>
+            <td>방향 설정 + AI 결과 확인/피드백</td>
+          </tr>
+          <tr>
+            <td>"투두 앱 만들어줘"는 좋은 지시일까요?</td>
+            <td>아니요. "같이 기획해보자"가 좋은 시작</td>
+          </tr>
+          <tr>
+            <td>바이브 코딩으로 만들기 어려운 것은?</td>
+            <td>대규모 동시접속, 은행급 보안 시스템</td>
+          </tr>
+        </table>
+
+        <p><em>바이브 코딩이 뭔지 알게 됐어요. 그런데 AI한테 어떻게 시켜야 잘 할까요? 다음 섹션에서 "유능한 상사"가 되는 법을 배워볼게요.</em></p>
+
       </section>
 
       <!-- ==================== 섹션 2: 유능한 상사 되기 ==================== -->
       <section id="mindset" class="content-section">
         <h1>AI의 유능한 상사 되기</h1>
+
+        <p class="section-recap"><em>바이브 코딩이 "명확한 의도로 AI를 지휘하는 것"이란 걸 배웠어요. 그러면 어떻게 지휘해야 할까요?</em></p>
 
         <div class="key-message">
           <span class="key-icon">🎯</span>
@@ -622,6 +663,31 @@
           </div>
         </div>
 
+        <h3>정확한 용어를 쓰면 AI가 더 잘 이해해요</h3>
+        <table>
+          <tr>
+            <th>모호한 표현</th>
+            <th>정확한 표현</th>
+            <th>효과</th>
+          </tr>
+          <tr>
+            <td>"보이는 부분"</td>
+            <td>"프론트엔드"</td>
+            <td>AI가 정확히 어떤 코드를 수정할지 앎</td>
+          </tr>
+          <tr>
+            <td>"데이터 어딘가 저장해"</td>
+            <td>"localStorage에 저장해"</td>
+            <td>저장 방식까지 명확하게 지정</td>
+          </tr>
+          <tr>
+            <td>"빠르게 해줘"</td>
+            <td>"응답 시간 2초 이내로"</td>
+            <td>구체적인 수치로 검증 가능</td>
+          </tr>
+        </table>
+        <p>용어를 외울 필요는 없어요. AI한테 "이걸 뭐라고 부르지?" 물어보면 돼요. 중요한 건 <strong>"그런 개념이 있다는 걸 아는 것"</strong>이에요.</p>
+
         <h2>기술적 지시가 가능한 매니저의 특징</h2>
         <div class="growth-path">
           <div class="growth-step" data-step="1">
@@ -679,10 +745,39 @@
           </div>
         </div>
 
+        <div class="insight-box">
+          <p><strong>왜 "한 번에 하나씩"이 중요할까요? — 토큰 제한</strong><br>
+          AI는 한 번에 처리할 수 있는 양(토큰)이 정해져 있어요. 대화가 길어지면 앞에서 한 말을 잊어버려요. 그래서 <strong>"한 번에 하나씩"</strong> 시키는 게 중요해요.<br><br>
+          기능 10개를 한꺼번에 말하면 → 뒤죽박죽<br>
+          하나씩 만들면 → 깔끔하고 정확</p>
+        </div>
+
         <blockquote>
           유능한 신입사원한테 "알아서 해"라고 하면 엉뚱한 결과.<br>
           <strong>"이 고객 데이터를 이 기준으로 정리해줘"</strong>라고 하면 완벽한 결과.
         </blockquote>
+
+        <h3>셀프 체크</h3>
+        <table>
+          <tr>
+            <th>질문</th>
+            <th>정답</th>
+          </tr>
+          <tr>
+            <td>AI에게 "알아서 해줘"라고 하면?</td>
+            <td>엉뚱한 결과가 나와요</td>
+          </tr>
+          <tr>
+            <td>코드를 "짜는 것"과 "보는 것" 중 바이브 코더에게 필요한 것은?</td>
+            <td>보는 것 (구조와 흐름 이해)</td>
+          </tr>
+          <tr>
+            <td>대화가 길어질수록 AI가 실수하는 이유는?</td>
+            <td>토큰 제한 — 앞 내용을 잊어요</td>
+          </tr>
+        </table>
+
+        <p><em>마인드셋이 잡혔으니, 이제 실제로 도구를 설치해볼 거예요. 4가지 무기를 세팅하러 가볼까요?</em></p>
 
       </section>
 
@@ -690,17 +785,15 @@
       <section id="tools" class="content-section">
         <h1>도구 세팅: 4가지 무기</h1>
 
+        <p class="section-recap"><em>마인드셋을 잡았으니, 이제 실전 준비를 해볼게요. 터미널, Claude Code, VS Code, Git, NPM — 하나씩 세팅하면 바이브 코딩 환경이 완성돼요.</em></p>
+
         <div class="key-message">
           <span class="key-icon">🎯</span>
-          <p class="key-text">터미널, VS Code, Git, NPM — 이 4가지만 있으면 바이브 코딩 준비 완료!</p>
+          <p class="key-text">터미널, Claude Code, VS Code, Git, NPM — 이 도구들만 세팅하면 바이브 코딩 준비 완료! 지금부터 하나씩 순서대로 설치해볼게요.</p>
         </div>
 
-        <blockquote>
-          터미널이라고 하면 겁부터 나시죠? 까만 화면에 깜빡이는 커서...<br>
-          근데 사실 카카오톡이랑 똑같아요.
-        </blockquote>
-
-        <h2>4대 도구</h2>
+        <!-- ===== 도구 개요 카드 ===== -->
+        <h2>4대 도구 한눈에 보기</h2>
         <div class="tool-grid">
           <div class="tool-card">
             <span class="tool-emoji">🤖</span>
@@ -732,33 +825,23 @@
           </div>
         </div>
 
-        <h2>설치 과정</h2>
+        <p>카드만 보면 감이 안 오시죠? 걱정 마세요. 지금부터 Step 1부터 Step 6까지, <strong>순서대로 따라하면 끝</strong>이에요. 각 단계가 끝나면 다음 단계로 자연스럽게 넘어가니까, 그냥 흐름을 따라오시면 돼요!</p>
 
-        <h3>터미널 열기</h3>
-        <p>Claude Code를 설치하려면 먼저 터미널을 열어야 해요.</p>
-        <div class="comparison-grid">
-          <div class="comparison-card" style="border-top:3px solid var(--color-info)">
-            <h3 style="color:var(--color-info)">🍎 Mac</h3>
-            <p style="font-size:18px;color:var(--color-text-secondary)"><code>Command</code> + <code>Space</code> → "Terminal" 검색 → 엔터</p>
-          </div>
-          <div class="comparison-card" style="border-top:3px solid var(--color-info)">
-            <h3 style="color:var(--color-info)">🪟 Windows</h3>
-            <p style="font-size:18px;color:var(--color-text-secondary)">윈도우 키 → "PowerShell" 검색 → 엔터</p>
-          </div>
-        </div>
+        <!-- ===== STEP 1: 터미널 이해하기 ===== -->
+        <h2>
+          <div class="step-indicator"><span class="step-number">1</span><span class="step-label">Step 1: 터미널 이해하기</span></div>
+        </h2>
 
-        <h3>Claude Code 설치 3단계</h3>
-        <p><strong>1단계:</strong> 설치 명령어 입력</p>
-        <pre>npm install -g @anthropic-ai/claude-code</pre>
-        <p><strong>2단계:</strong> Claude Code 실행</p>
-        <pre>claude</pre>
-        <p><strong>3단계:</strong> 로그인 — 브라우저가 자동으로 열려요. Claude 계정으로 로그인하면 승인 완료!</p>
-        <p>설치 확인: <code>claude --version</code> (버전 번호가 나오면 성공!)</p>
-        <div class="insight-box">
-          <p><strong>트러블슈팅:</strong> <code>npm: command not found</code> 오류가 나오면? → Node.js LTS 버전을 먼저 설치하세요 (<a href="https://nodejs.org" target="_blank">nodejs.org</a>). Node.js를 설치하면 npm이 자동으로 함께 설치돼요.</p>
-        </div>
+        <blockquote>
+          터미널이라고 하면 겁부터 나시죠? 까만 화면에 깜빡이는 커서...<br>
+          근데 사실 <strong>카카오톡이랑 똑같아요.</strong>
+        </blockquote>
+
+        <h3>카카오톡 비유로 이해하기</h3>
+        <p>카카오톡은 <strong>사람 ↔ 사람</strong> 사이의 대화창이에요. 터미널은 <strong>사람 ↔ 컴퓨터</strong> 사이의 대화창이에요. 카카오톡에서 친구한테 "사진 보내줘"라고 하듯, 터미널에서 컴퓨터한테 "파일 목록 보여줘"라고 하는 거예요. 그게 전부에요!</p>
 
         <h3>GUI vs CLI 비교</h3>
+        <p>지금까지 여러분은 마우스로 폴더를 클릭하고, 우클릭해서 새 폴더를 만들었죠? 그게 <strong>GUI</strong> 방식이에요. 터미널은 같은 일을 <strong>글자(명령어)</strong>로 하는 <strong>CLI</strong> 방식이에요.</p>
         <div class="comparison-grid">
           <div class="comparison-card traditional">
             <h3>GUI (마우스 방식)</h3>
@@ -770,8 +853,110 @@
             <p style="font-size:16px;color:var(--color-text-muted)">AI가 터미널 명령을 직접 실행할 수 있어요</p>
           </div>
         </div>
+        <p>왜 굳이 CLI를 배워야 할까요? 바로 <strong>AI가 마우스를 못 쓰기 때문</strong>이에요. AI는 터미널 명령어는 직접 실행할 수 있지만, 마우스 클릭은 못 해요. 그래서 터미널을 쓰면 AI에게 일을 시킬 수 있는 거예요!</p>
 
-        <h3>첫 업무 지시 (대화 예시)</h3>
+        <h3>터미널 여는 법</h3>
+        <div class="comparison-grid">
+          <div class="comparison-card" style="border-top:3px solid var(--color-info)">
+            <h3 style="color:var(--color-info)">🍎 Mac</h3>
+            <p style="font-size:18px;color:var(--color-text-secondary)"><code>Command</code> + <code>Space</code> → "Terminal" 검색 → 엔터</p>
+          </div>
+          <div class="comparison-card" style="border-top:3px solid var(--color-info)">
+            <h3 style="color:var(--color-info)">🪟 Windows</h3>
+            <p style="font-size:18px;color:var(--color-text-secondary)">윈도우 키 → "PowerShell" 검색 → 엔터</p>
+          </div>
+        </div>
+
+        <!-- ===== STEP 2: 터미널 기초 명령어 ===== -->
+        <h2>
+          <div class="step-indicator"><span class="step-number">2</span><span class="step-label">Step 2: 터미널 기초 명령어 5가지</span></div>
+        </h2>
+
+        <p>터미널을 열었으니, 기본 조작법을 먼저 배워볼게요. <strong>딱 5개만 알면 돼요.</strong></p>
+
+        <table>
+          <tr>
+            <th>명령어</th>
+            <th>뜻</th>
+            <th>마우스로 하면</th>
+            <th>예시</th>
+          </tr>
+          <tr>
+            <td><code>cd 폴더명</code></td>
+            <td>Change Directory (이동)</td>
+            <td>폴더 더블클릭</td>
+            <td><code>cd my-project</code></td>
+          </tr>
+          <tr>
+            <td><code>cd ..</code></td>
+            <td>상위 폴더로</td>
+            <td>뒤로가기 버튼</td>
+            <td><code>cd ..</code></td>
+          </tr>
+          <tr>
+            <td><code>ls</code></td>
+            <td>List (목록 보기)</td>
+            <td>폴더 안을 눈으로 확인</td>
+            <td><code>ls</code></td>
+          </tr>
+          <tr>
+            <td><code>mkdir 이름</code></td>
+            <td>Make Directory (폴더 만들기)</td>
+            <td>우클릭 → 새 폴더</td>
+            <td><code>mkdir my-news-bot</code></td>
+          </tr>
+          <tr>
+            <td><code>pwd</code></td>
+            <td>Print Working Directory</td>
+            <td>탐색기 주소 표시줄</td>
+            <td><code>pwd</code></td>
+          </tr>
+        </table>
+
+        <h3>5분 실습: "AI의 집 짓기"</h3>
+        <p>직접 따라 쳐보세요! 터미널에서 폴더를 만들고 이동하는 연습이에요.</p>
+        <pre>pwd                    # 나 지금 어디 있지?
+mkdir my-house         # 집을 만들자
+cd my-house            # 집 안으로 들어가자
+mkdir living-room      # 거실을 만들자
+mkdir kitchen          # 부엌도 만들자
+ls                     # 뭐가 있는지 확인!</pre>
+        <p><code>ls</code>를 치면 <code>living-room</code>과 <code>kitchen</code>이 보이면 성공이에요!</p>
+
+        <div class="insight-box">
+          <p><strong>"AI가 다 해주는데 왜 이걸 배우나요?"</strong><br>
+          AI가 "파일을 찾을 수 없습니다" 에러를 내면, 여러분이 <code>ls</code>로 현재 폴더를 확인하고 <code>cd</code>로 올바른 위치로 이동해야 해요. 유능한 상사는 신입이 막혔을 때 <strong>상황을 파악하고 방향을 잡아줄 수 있어야</strong>해요.</p>
+        </div>
+
+        <div class="insight-box">
+          <p><strong>주의: <code>rm</code> (삭제) 명령어</strong><br>
+          <code>rm 파일명</code>으로 파일을 지울 수 있어요. 하지만 터미널에서 삭제하면 <strong>휴지통을 거치지 않아요!</strong> 영구 삭제되니까 조심하세요. 지금은 몰라도 되고, 나중에 필요할 때 AI에게 물어보면 돼요.</p>
+        </div>
+
+        <p><em>기본 이동법을 배웠으니, 이제 AI 도우미를 설치해볼게요!</em></p>
+
+        <!-- ===== STEP 3: Claude Code 설치하기 ===== -->
+        <h2>
+          <div class="step-indicator"><span class="step-number">3</span><span class="step-label">Step 3: Claude Code 설치하기</span></div>
+        </h2>
+
+        <p>웹 브라우저에서 ChatGPT를 써보셨죠? 거기서는 AI가 코드를 "보여주기만" 해요. 여러분이 직접 복사해서 붙여넣어야 하죠. <strong>Claude Code</strong>는 달라요. 터미널에서 직접 파일을 만들고, 수정하고, 실행까지 해요. 말 그대로 "손발이 달린 AI"예요.</p>
+
+        <h3>설치 3단계</h3>
+        <p><strong>1단계:</strong> 아까 열어둔 터미널에 설치 명령어를 입력해요.</p>
+        <pre>npm install -g @anthropic-ai/claude-code</pre>
+        <p><strong>2단계:</strong> 설치가 끝나면 Claude Code를 실행해요.</p>
+        <pre>claude</pre>
+        <p><strong>3단계:</strong> 브라우저가 자동으로 열려요. Claude 계정으로 로그인하면 승인 완료!</p>
+
+        <p><strong>설치 확인:</strong> <code>claude --version</code>을 입력해서 버전 번호가 나오면 성공이에요!</p>
+
+        <div class="insight-box">
+          <p><strong>트러블슈팅:</strong> <code>npm: command not found</code> 오류가 나오면? → Node.js LTS 버전을 먼저 설치하세요 (<a href="https://nodejs.org" target="_blank">nodejs.org</a>). Node.js를 설치하면 npm이 자동으로 함께 설치돼요.</p>
+        </div>
+
+        <h3>첫 업무 지시해보기</h3>
+        <p>설치가 됐으니 바로 써볼까요? <code>claude</code>를 실행한 상태에서 한국어로 말하면 돼요.</p>
         <blockquote>
           <strong>나:</strong> "현재 폴더에 있는 파일 목록 좀 보여줘"<br>
           <strong>Claude:</strong> <code>ls</code> 명령어를 자동 실행하고 결과를 보여줘요
@@ -780,31 +965,54 @@
           <strong>나:</strong> "여기에 hello.txt 파일 만들어줘. 내용은 '안녕하세요'로"<br>
           <strong>Claude:</strong> 파일을 직접 생성해요. 복붙할 필요 없어요!
         </blockquote>
-        <p><strong>명령어를 몰라도 AI가 알아서 처리해요.</strong> 터미널 명령어를 외울 필요 없어요. 한국어로 말하면 AI가 알아서 실행해요.</p>
-        <p>비유: 카카오톡(사람↔사람) vs 터미널(사람↔컴퓨터)</p>
+        <p><strong>명령어를 몰라도 AI가 알아서 처리해요.</strong> 터미널 명령어를 외울 필요 없어요. 한국어로 말하면 AI가 알아서 실행해요. 이게 바로 바이브 코딩의 핵심이에요!</p>
 
-        <h3>VS Code 설치 + 세팅</h3>
-        <p><strong>VS Code (Visual Studio Code)</strong> = 전 세계 개발자의 70% 이상이 사용하는 전문가용 작업 환경이에요.</p>
-        <p><strong>설치 방법:</strong></p>
+        <p><em>Claude Code가 준비됐어요! 이제 코드를 편하게 볼 수 있는 작업 환경을 만들어볼까요?</em></p>
+
+        <!-- ===== STEP 4: VS Code 세팅하기 ===== -->
+        <h2>
+          <div class="step-indicator"><span class="step-number">4</span><span class="step-label">Step 4: VS Code 세팅하기</span></div>
+        </h2>
+
+        <p><strong>VS Code (Visual Studio Code)</strong>는 전 세계 개발자의 70% 이상이 사용하는 전문가용 작업 환경이에요. Claude Code가 만든 코드를 눈으로 확인하고, 직접 수정할 수 있는 공간이에요.</p>
+
+        <h3>설치 방법</h3>
         <ol>
           <li><a href="https://code.visualstudio.com" target="_blank">VS Code 공식 홈페이지</a> 접속</li>
           <li>파란색 <strong>Download</strong> 버튼 클릭</li>
           <li>설치 파일 실행 → "다음, 다음, 완료"</li>
         </ol>
-        <p><strong>주요 기능 3가지:</strong></p>
+
+        <h3>VS Code 해부하기</h3>
+        <p>VS Code를 열면 3가지 영역이 보여요. 주방에 비유하면 이해가 쉬워요.</p>
+        <ul>
+          <li><strong>탐색기(왼쪽 패널)</strong> = 냉장고 — 프로젝트 파일을 보관하고 꺼내는 곳</li>
+          <li><strong>에디터(가운데)</strong> = 도마 — 코드를 열어놓고 직접 편집하는 곳</li>
+          <li><strong>터미널(아래쪽)</strong> = 가스레인지 — 명령어를 실행하는 곳 (여기서 Claude Code도 돌려요!)</li>
+        </ul>
+
+        <h3>주요 기능 3가지</h3>
         <ul>
           <li><strong>자동 완성:</strong> <code>cl</code>만 쳐도 <code>console.log</code>를 추천해줘요</li>
           <li><strong>에러 표시:</strong> 문제 있는 코드 아래 빨간 줄이 나와요</li>
           <li><strong>터미널 내장:</strong> 별도 창 없이 VS Code 안에서 터미널을 쓸 수 있어요</li>
         </ul>
-        <p><strong>필수 확장 프로그램:</strong> Korean Language Pack</p>
+
+        <h3>필수 확장 프로그램: Korean Language Pack</h3>
         <ol>
           <li>VS Code 왼쪽 사이드바에서 확장(Extensions) 아이콘 클릭</li>
           <li>검색창에 <code>Korean</code> 입력</li>
           <li>"Korean Language Pack for Visual Studio Code" → <strong>Install</strong> → <strong>Restart</strong></li>
         </ol>
+
+        <h3><code>code .</code> 명령어</h3>
         <pre>code .    # "현재 폴더를 VS Code로 열어"</pre>
-        <p><code>code</code>는 "VS Code를 실행해", <code>.</code>(점)은 "현재 폴더를 열어"라는 뜻이에요.</p>
+        <p><code>code</code>는 "VS Code를 실행해", <code>.</code>(점)은 "현재 폴더를 열어"라는 뜻이에요. 터미널에서 프로젝트 폴더로 이동한 뒤 <code>code .</code>을 입력하면 해당 폴더가 VS Code에서 열려요.</p>
+
+        <div class="insight-box">
+          <p><strong>터미널 여는 법:</strong> VS Code 안에서 터미널이 안 보일 때 → 상단 메뉴 <code>Terminal</code> → <code>New Terminal</code> 또는 단축키 <code>Ctrl + `</code> (백틱). 터미널은 VS Code 아래쪽에 나타나요.</p>
+        </div>
+
         <h3>실습: 파일 만들고 저장하기</h3>
         <ol>
           <li><code>code .</code> 명령어로 VS Code 열기</li>
@@ -816,27 +1024,39 @@
         <div class="insight-box">
           <p><strong>팁:</strong> 파일명 옆에 동그라미(●)가 보이면 = 아직 저장 안 된 거예요. <code>Ctrl+S</code> 누르면 사라져요.</p>
         </div>
+
+        <p><em>파일을 만들었으니, 이제 안전하게 저장하는 법을 배워볼게요!</em></p>
+
+        <!-- ===== STEP 5: Git — 게임 세이브 ===== -->
+        <h2>
+          <div class="step-indicator"><span class="step-number">5</span><span class="step-label">Step 5: Git — 게임 세이브</span></div>
+        </h2>
+
+        <p>RPG 게임 해보셨죠? 보스전 앞에서 반드시 세이브하잖아요. 코딩도 똑같아요. "로그인 기능 건드릴 건데, 망치면 귀찮으니까 여기서 일단 저장!" — 이게 Git이에요.</p>
+
+        <h3>Git 시작하기</h3>
+        <p>프로젝트 폴더에서 터미널을 열고 이 명령어를 입력하면 Git이 시작돼요.</p>
+        <pre>git init</pre>
         <div class="insight-box">
-          <p><strong>터미널 여는 법:</strong> VS Code 안에서 터미널이 안 보일 때 → 상단 메뉴 <code>Terminal</code> → <code>New Terminal</code> 또는 단축키 <code>Ctrl + `</code> (백틱). 터미널은 VS Code 아래쪽에 나타나요.</p>
+          <p><code>Initialized empty Git repository</code>가 뜨면 성공이에요! 이 폴더에서 세이브 기능이 켜진 거예요.</p>
         </div>
 
-        <h3>Git 3단계 주문</h3>
-        <p>첫 시작: <code>git init</code> — 이 폴더에서 세이브 기능을 켜는 것!</p>
-        <div class="insight-box">
-          <p><code>Initialized empty Git repository</code>가 뜨면 성공이에요!</p>
-        </div>
+        <h3>Git 3단계 주문: 담고 → 찍고 → 밀고</h3>
+        <p>Git은 딱 3줄만 기억하면 돼요.</p>
         <pre>git add .           # 담고 (점 . = "모든 파일 다 담아!")
 git commit -m "메시지"  # 찍고 (세이브 포인트 찍기)
 git push             # 밀고 (클라우드에 올리기)</pre>
+
         <div class="insight-box">
           <p><strong>RPG 비유:</strong> "보스를 잡기 전에 저장! 로그인 기능 건드릴 건데, 망치면 귀찮으니까 여기서 일단 저장!" → <code>git commit -m "로그인 건드리기 전 세이브"</code> → 마음의 평화. 망쳤으면? 세이브 포인트로 돌아가면 돼요.</p>
         </div>
+
         <p><strong>이것만 알면 코드는 절대 날아가지 않아요.</strong></p>
 
-        <h3>GitHub 연결하기</h3>
+        <h3>GitHub 연결하기 (클라우드 세이브)</h3>
         <p><strong>GitHub = 클라우드 세이브.</strong> 내 컴퓨터가 고장나도 코드가 안전해요. GitHub에서 저장소를 만든 후, 이 3줄만 터미널에 붙여넣으면 연결 끝!</p>
         <ol>
-          <li>GitHub.com 회원가입</li>
+          <li><a href="https://github.com" target="_blank">GitHub.com</a> 회원가입</li>
           <li><code>+</code> → <code>New repository</code> → 이름 짓기 → <code>Create repository</code></li>
           <li>아래 3줄을 터미널에 붙여넣기:</li>
         </ol>
@@ -845,9 +1065,18 @@ git branch -M main
 git push -u origin main</pre>
         <p>이제 <code>git push</code> 한 번이면 내 코드가 클라우드에 저장돼요.</p>
 
-        <h3>NPM + .env</h3>
-        <p><strong>NPM(Node Package Manager)</strong>은 프로젝트에 필요한 라이브러리를 관리하는 도구예요. "내 컴퓨터에서만 작동 안 함" 문제를 해결해줘요.</p>
-        <p><strong>package.json = 레시피 파일.</strong> 프로젝트에 필요한 재료(라이브러리) 목록이에요.</p>
+        <p><em>코드가 안전하게 저장되고 있어요! 마지막으로, 프로젝트에 필요한 도구들을 세팅해볼게요.</em></p>
+
+        <!-- ===== STEP 6: NPM + .env ===== -->
+        <h2>
+          <div class="step-indicator"><span class="step-number">6</span><span class="step-label">Step 6: NPM + .env</span></div>
+        </h2>
+
+        <h3>NPM = 프로젝트 재료 관리자</h3>
+        <p><strong>NPM(Node Package Manager)</strong>은 프로젝트에 필요한 라이브러리를 관리하는 도구예요. 다른 사람이 만든 프로젝트를 받았는데 "내 컴퓨터에서만 작동 안 함"... 이런 경험 있으시죠? NPM이 이 문제를 해결해줘요.</p>
+
+        <h3>package.json = 레시피 파일</h3>
+        <p>프로젝트에 필요한 재료(라이브러리) 목록이 적혀있는 파일이에요.</p>
         <pre>{
   "name": "my-project",
   "dependencies": {
@@ -856,14 +1085,23 @@ git push -u origin main</pre>
   }
 }</pre>
         <p><code>npm install</code>을 실행하면 package.json에 적힌 모든 라이브러리가 <strong>node_modules</strong> 폴더에 자동으로 설치돼요. 레시피만 있으면 누구든 같은 환경을 만들 수 있어요!</p>
-        <p><strong>.gitignore 필수 2가지:</strong></p>
+
+        <h3>.env = 비밀번호 금고</h3>
+        <p>API 키 같은 민감한 정보를 안전하게 보관하는 파일이에요.</p>
+        <pre>API_KEY=abcdefg12345</pre>
+        <p>코드에서는 <code>process.env.API_KEY</code>로 가져와요. 코드 파일에 비밀번호를 직접 쓰면 GitHub에 올릴 때 전 세계에 공개되니까, 반드시 .env 파일에 따로 보관해야 해요!</p>
+
+        <h3>.gitignore: Git에 올리면 안 되는 것들</h3>
+        <p>프로젝트 루트에 <code>.gitignore</code> 파일을 만들고 이 2줄을 적어두세요.</p>
         <pre>node_modules/   # 재료 보관함 (용량 크고, npm install로 재설치 가능)
 .env            # 비밀번호 금고 (API 키 유출 위험!)</pre>
         <div class="insight-box">
-          <p><strong>.env 사용법:</strong> <code>API_KEY=abcdefg12345</code> 형식으로 저장하고, 코드에서는 <code>process.env.API_KEY</code>로 가져와요. 비밀번호를 코드에 직접 쓰면 GitHub에 올릴 때 전 세계에 공개되는 거예요!</p>
+          <p><strong>중요:</strong> 비밀번호를 코드에 직접 쓰면 GitHub에 push할 때 전 세계에 공개돼요! 반드시 <code>.env</code>에 넣고, <code>.gitignore</code>에 등록하세요.</p>
         </div>
 
+        <!-- ===== 4대 도구 종합 테이블 ===== -->
         <h2>4대 도구 종합</h2>
+        <p>6단계를 모두 마쳤어요! 지금까지 세팅한 도구를 정리하면 이래요.</p>
         <table>
           <tr>
             <th>도구</th>
@@ -897,11 +1135,43 @@ git push -u origin main</pre>
           </tr>
         </table>
 
+        <h3>셀프 체크</h3>
+        <table>
+          <tr>
+            <th>질문</th>
+            <th>정답</th>
+          </tr>
+          <tr>
+            <td>현재 폴더의 파일 목록을 보는 명령어는?</td>
+            <td><code>ls</code></td>
+          </tr>
+          <tr>
+            <td>Claude Code 설치 확인 명령어는?</td>
+            <td><code>claude --version</code></td>
+          </tr>
+          <tr>
+            <td>현재 폴더를 VS Code로 여는 명령어는?</td>
+            <td><code>code .</code></td>
+          </tr>
+          <tr>
+            <td>Git의 3단계 주문은?</td>
+            <td><code>add → commit → push</code></td>
+          </tr>
+          <tr>
+            <td><code>.env</code> 파일은 왜 <code>.gitignore</code>에 넣나요?</td>
+            <td>API 키 유출 방지</td>
+          </tr>
+        </table>
+
+        <p><em>도구가 모두 준비됐어요! 이제 진짜로 뭔가를 만들어볼 차례예요. AI와 대화하면서 뉴스 요약 슬랙 봇을 만들어볼게요.</em></p>
+
       </section>
 
       <!-- ==================== 섹션 4: 실전 — 뉴스 봇 만들기 ==================== -->
       <section id="hands-on" class="content-section">
         <h1>실전: 뉴스 요약 슬랙 봇 만들기</h1>
+
+        <p class="section-recap"><em>도구 세팅까지 마쳤어요. Claude Code, VS Code, Git, NPM이 모두 준비된 상태예요. 이제 이 도구들을 사용해서 실제로 동작하는 자동화 비서를 만들어볼게요.</em></p>
 
         <div class="key-message">
           <span class="key-icon">🎯</span>
@@ -1339,6 +1609,30 @@ git push</pre>
           </tr>
         </table>
 
+        <h3>셀프 체크</h3>
+        <table>
+          <tr>
+            <th>질문</th>
+            <th>정답</th>
+          </tr>
+          <tr>
+            <td>RSS와 크롤링의 차이는?</td>
+            <td>RSS = 공식 제공 피드, 크롤링 = 직접 긁어옴</td>
+          </tr>
+          <tr>
+            <td>Webhook URL을 코드에 직접 넣으면 안 되는 이유는?</td>
+            <td>유출 시 아무나 메시지를 보낼 수 있어요</td>
+          </tr>
+          <tr>
+            <td>GitHub Actions에서 한국 9시 = UTC 몇 시?</td>
+            <td>UTC 0시 (한국이 +9시간)</td>
+          </tr>
+          <tr>
+            <td><code>node index.js</code> 없이 자동 실행하려면?</td>
+            <td>GitHub Actions + Cron 스케줄</td>
+          </tr>
+        </table>
+
       </section>
 
       <!-- ==================== 섹션 ~: 정리 ==================== -->
@@ -1349,6 +1643,39 @@ git push</pre>
           <span class="key-icon">🎯</span>
           <p class="key-text">바이브 코딩은 마법이 아니에요. AI와 대화하면서, 확인하면서, 함께 만들어가는 거예요.</p>
         </div>
+
+        <div class="flow-diagram">
+          <div class="flow-node">
+            <span class="flow-emoji">✅</span>
+            <span class="flow-label">개념</span>
+            <span class="flow-desc">바이브 코딩 이해</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">✅</span>
+            <span class="flow-label">마인드셋</span>
+            <span class="flow-desc">유능한 상사 되기</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">✅</span>
+            <span class="flow-label">도구</span>
+            <span class="flow-desc">6단계 세팅 완료</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">✅</span>
+            <span class="flow-label">실전</span>
+            <span class="flow-desc">뉴스봇 완성!</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-node">
+            <span class="flow-emoji">🎉</span>
+            <span class="flow-label">완료</span>
+            <span class="flow-desc">바이브 코더!</span>
+          </div>
+        </div>
+        <p style="text-align:center;font-size:18px;color:var(--color-text-muted)">축하해요! 이 문서 하나로 바이브 코딩의 개념부터 실제 자동화 봇 배포까지 해냈어요.</p>
 
         <h2>오늘 배운 전체 흐름</h2>
         <table>
@@ -1431,9 +1758,30 @@ git push</pre>
           AI와 대화하면서, 확인하면서, 함께 만들어가는 거예요."
         </blockquote>
 
-        <p style="text-align:center;margin-top:48px;font-size:18px;color:var(--color-text-muted)">
-          참고: <a href="https://max5.ai" target="_blank">max5.ai</a> 바이브 코딩 시리즈 (전체 35편)
-        </p>
+        <h3>더 깊이 배우고 싶다면</h3>
+        <p>이 문서는 <a href="https://max5.ai" target="_blank">max5.ai</a> 바이브 코딩 시리즈 35편 중 Part 1(마인드셋) + Part 2(도구 세팅) + Part 6(자동화)를 다뤘어요.</p>
+        <table>
+          <tr>
+            <th>다음 단계</th>
+            <th>내용</th>
+          </tr>
+          <tr>
+            <td><strong>Part 3</strong></td>
+            <td>프론트엔드/백엔드, API, 데이터 흐름 이해</td>
+          </tr>
+          <tr>
+            <td><strong>Part 4</strong></td>
+            <td>첫 웹 프로젝트 만들기 (기획→프론트→백엔드→배포)</td>
+          </tr>
+          <tr>
+            <td><strong>Part 5</strong></td>
+            <td>아키텍처, 디자인 패턴, 상태 관리</td>
+          </tr>
+          <tr>
+            <td><strong>Part 7-8</strong></td>
+            <td>실무 프로젝트 (DB, CRUD, 대시보드) + 디버깅</td>
+          </tr>
+        </table>
       </section>
 
     </main>

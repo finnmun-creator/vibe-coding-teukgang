@@ -1205,6 +1205,15 @@ button:focus,
   color: #78350F;
 }
 
+/* ===== SECTION RECAP (리캡) ===== */
+.section-recap {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xl);
+  padding-left: var(--space-lg);
+  border-left: 3px solid var(--color-border-light);
+}
+
 /* ===== MODAL STYLES ===== */
 
 /* Modal */
