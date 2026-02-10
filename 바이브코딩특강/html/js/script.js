@@ -186,4 +186,92 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.key === 'Escape') closeModal();
   });
 
+  // ===== Mobile Tab Bar =====
+  const mobileQuery = window.matchMedia('(max-width: 768px)');
+  const tabBar = document.querySelector('.mobile-tab-bar');
+  const tabItems = document.querySelectorAll('.tab-item');
+
+  // Tab click → scroll to section
+  tabItems.forEach(function(tab) {
+    tab.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (!mobileQuery.matches) return;
+
+      var targetId = this.getAttribute('data-target');
+      var section = document.getElementById(targetId);
+      if (!section) return;
+
+      // Update active tab
+      tabItems.forEach(function(t) { t.classList.remove('active'); });
+      this.classList.add('active');
+
+      // Scroll section into view (offset for sticky tab bar)
+      var tabBarHeight = tabBar ? tabBar.offsetHeight : 0;
+      var top = section.getBoundingClientRect().top + window.pageYOffset - tabBarHeight - 8;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+
+      // Center active tab in tab bar
+      this.scrollIntoView({ inline: 'center', behavior: 'smooth' });
+    });
+  });
+
+  // Scroll → sync active tab (IntersectionObserver)
+  function setupScrollSync() {
+    if (!mobileQuery.matches) return;
+
+    var observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -60% 0px',
+      threshold: 0
+    };
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var id = entry.target.id;
+          tabItems.forEach(function(t) { t.classList.remove('active'); });
+          var activeTab = document.querySelector('.tab-item[data-target="' + id + '"]');
+          if (activeTab) {
+            activeTab.classList.add('active');
+            activeTab.scrollIntoView({ inline: 'center', behavior: 'smooth' });
+          }
+        }
+      });
+    }, observerOptions);
+
+    contentSections.forEach(function(section) {
+      observer.observe(section);
+    });
+
+    return observer;
+  }
+
+  var scrollObserver = null;
+
+  function handleMobileChange(e) {
+    if (e.matches) {
+      // Entering mobile: show all sections, setup observer
+      scrollObserver = setupScrollSync();
+    } else {
+      // Leaving mobile: disconnect observer, restore single-section view
+      if (scrollObserver) {
+        scrollObserver.disconnect();
+        scrollObserver = null;
+      }
+      // Restore desktop: hide non-active sections
+      var activeNav = document.querySelector('.nav-link.active');
+      var activeId = activeNav ? activeNav.getAttribute('data-target') : 'overview';
+      contentSections.forEach(function(section) {
+        section.classList.remove('active');
+        if (section.id === activeId) section.classList.add('active');
+      });
+    }
+  }
+
+  // Initialize
+  mobileQuery.addEventListener('change', handleMobileChange);
+  if (mobileQuery.matches) {
+    scrollObserver = setupScrollSync();
+  }
+
 });
