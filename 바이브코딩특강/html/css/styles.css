@@ -1387,6 +1387,10 @@ button:focus,
 }
 
 @media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
   .sidebar { display: none; }
 
   /* Show all sections for scroll-based navigation */
@@ -1439,6 +1443,7 @@ button:focus,
   .main-content {
     margin-left: 0;
     width: 100%;
+    min-width: 0;
     padding: var(--space-lg) var(--space-md);
   }
 
